@@ -1,4 +1,9 @@
 {
-  "item.endmod.smile": "Smile"
+  "item.endmod.smile": "Smile",
+
+  "block.endmod.block_of_smile": "Block of smiles",
+  "block.endmod.packed_end_sludge": "Packed End Sludge",
+  "block.endmod.end_sludge": "End Sludge",
+  "block.endmod.end_sludge_bricks": "End Sludge Bricks"
 
 }
