@@ -22,6 +22,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.PACKED_END_SLUDGE.get());
         dropSelf(ModBlocks.END_SLUDGE_BRICKS_WALL.get());
         dropSelf(ModBlocks.PACKED_END_SLUDGE_WALL.get());
+        dropSelf(ModBlocks.CHORUS_TURF.get());
 
         //ores
         this.add(ModBlocks.BLOCK_OF_SMILE.get(),

@@ -6,7 +6,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -48,7 +47,13 @@ public class ModBlocks {
     public static final RegistryObject<WallBlock> PACKED_END_SLUDGE_WALL = registerBlock("packed_end_sludge_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of().strength(2).requiresCorrectToolForDrops().sound(SoundType.PACKED_MUD)));
 
-
+    public static final RegistryObject<Block> CHORUS_TURF = registerBlock("chorus_turf",
+            ()-> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.5F)
+                    .emissiveRendering((state, world, pos) -> true)
+                    .friction(0.65F)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(state -> 7)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -23,6 +23,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         wallItem(ModBlocks.END_SLUDGE_BRICKS_WALL, ModBlocks.END_SLUDGE_BRICKS);
         wallItem(ModBlocks.PACKED_END_SLUDGE_WALL, ModBlocks.PACKED_END_SLUDGE);
+
+        withExistingParent(ModBlocks.CHORUS_TURF.getId().getPath(),
+                modLoc("block/chorus_turf")); // Uses the block model as the item model
     }
 
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {

@@ -35,9 +35,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.PACKED_END_SLUDGE_STAIRS);
         blockItem(ModBlocks.PACKED_END_SLUDGE_SLAB);
 
-        simpleBlock();
-
+        //blockWithItem(ModBlocks.CHORUS_TURF);
+        simpleBlock(ModBlocks.CHORUS_TURF.get(), models().cubeBottomTop(
+                "chorus_turf",
+                modLoc("block/chorus_turf"),
+                modLoc("block/chorus_turf_bottom"),
+                modLoc("block/chorus_turf_top")
+        ));
     }
+
 
     private void blockWithItem(RegistryObject<Block>blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
