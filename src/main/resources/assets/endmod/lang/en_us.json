@@ -4,6 +4,15 @@
   "block.endmod.block_of_smile": "Block of smiles",
   "block.endmod.packed_end_sludge": "Packed End Sludge",
   "block.endmod.end_sludge": "End Sludge",
-  "block.endmod.end_sludge_bricks": "End Sludge Bricks"
+  "block.endmod.end_sludge_bricks": "End Sludge Bricks",
 
+  "block.endmod.end_sludge_bricks_slab": "End Sludge Bricks Slab",
+  "block.endmod.end_sludge_bricks_stairs": "End Sludge Bricks Stairs",
+  "block.endmod.end_sludge_bricks_wall": "End Sludge Bricks Wall",
+
+  "block.endmod.packed_end_sludge_slab": "Packed End Sludge Slab",
+  "block.endmod.packed_end_sludge_stairs": "Packed End Sludge Stairs",
+  "block.endmod.packed_end_sludge_wall": "Packed End Sludge Wall",
+
+  "creativetab.endmod.end_stuff": "End Stuff"
 }

@@ -2,8 +2,8 @@ package net.eskimo.endmod;
 
 import com.mojang.logging.LogUtils;
 import net.eskimo.endmod.Block.ModBlocks;
+import net.eskimo.endmod.items.ModCreativeTabs;
 import net.eskimo.endmod.items.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,9 +34,10 @@ public class EndMod {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModCreativeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

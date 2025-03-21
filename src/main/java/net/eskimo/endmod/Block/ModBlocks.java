@@ -4,8 +4,7 @@ import net.eskimo.endmod.EndMod;
 import net.eskimo.endmod.items.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -32,6 +31,22 @@ public class ModBlocks {
     public static final RegistryObject<Block> END_SLUDGE_BRICKS = registerBlock("end_sludge_bricks",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
+
+    public static final RegistryObject<StairBlock> END_SLUDGE_BRICKS_STAIRS = registerBlock("end_sludge_bricks_stairs",
+            () -> new StairBlock(ModBlocks.END_SLUDGE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(2).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
+    public static final RegistryObject<SlabBlock> END_SLUDGE_BRICKS_SLAB = registerBlock("end_sludge_bricks_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(2).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
+    public static final RegistryObject<WallBlock> END_SLUDGE_BRICKS_WALL = registerBlock("end_sludge_bricks_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(2).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
+
+    public static final RegistryObject<StairBlock> PACKED_END_SLUDGE_STAIRS = registerBlock("packed_end_sludge_stairs",
+            () -> new StairBlock(ModBlocks.PACKED_END_SLUDGE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(2).requiresCorrectToolForDrops().sound(SoundType.PACKED_MUD)));
+    public static final RegistryObject<SlabBlock> PACKED_END_SLUDGE_SLAB = registerBlock("packed_end_sludge_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(2).requiresCorrectToolForDrops().sound(SoundType.PACKED_MUD)));
+    public static final RegistryObject<WallBlock> PACKED_END_SLUDGE_WALL = registerBlock("packed_end_sludge_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(2).requiresCorrectToolForDrops().sound(SoundType.PACKED_MUD)));
 
 
 

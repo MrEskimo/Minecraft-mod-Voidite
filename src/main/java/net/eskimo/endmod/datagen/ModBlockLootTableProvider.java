@@ -20,10 +20,20 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.END_SLUDGE.get());
         dropSelf(ModBlocks.END_SLUDGE_BRICKS.get());
         dropSelf(ModBlocks.PACKED_END_SLUDGE.get());
+        dropSelf(ModBlocks.END_SLUDGE_BRICKS_WALL.get());
+        dropSelf(ModBlocks.PACKED_END_SLUDGE_WALL.get());
 
         //ores
         this.add(ModBlocks.BLOCK_OF_SMILE.get(),
               block -> createOreDrop(ModBlocks.BLOCK_OF_SMILE.get(), ModItems.SMILE.get()));
+
+        dropSelf(ModBlocks.END_SLUDGE_BRICKS_STAIRS.get());
+        this.add(ModBlocks.END_SLUDGE_BRICKS_SLAB.get(),
+                 block -> createSlabItemTable(ModBlocks.END_SLUDGE_BRICKS_SLAB.get()));
+
+        dropSelf(ModBlocks.PACKED_END_SLUDGE_STAIRS.get());
+        this.add(ModBlocks.PACKED_END_SLUDGE_SLAB.get(),
+                 block -> createSlabItemTable(ModBlocks.PACKED_END_SLUDGE_SLAB.get()));
 
     }
 
