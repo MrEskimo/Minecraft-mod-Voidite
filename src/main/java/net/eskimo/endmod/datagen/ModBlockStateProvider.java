@@ -36,12 +36,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.PACKED_END_SLUDGE_SLAB);
 
         //blockWithItem(ModBlocks.CHORUS_TURF);
-        simpleBlock(ModBlocks.CHORUS_TURF.get(), models().cubeBottomTop(
+        simpleBlockWithItem(ModBlocks.CHORUS_TURF.get(), models().cubeBottomTop(
                 "chorus_turf",
                 modLoc("block/chorus_turf"),
                 modLoc("block/chorus_turf_bottom"),
                 modLoc("block/chorus_turf_top")
         ));
+        blockItem(ModBlocks.VOID_GRASS);
     }
 
 

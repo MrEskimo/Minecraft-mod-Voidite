@@ -5,6 +5,7 @@ import net.eskimo.endmod.EndMod;
 import net.eskimo.endmod.items.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -24,8 +25,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.END_SLUDGE_BRICKS_WALL, ModBlocks.END_SLUDGE_BRICKS);
         wallItem(ModBlocks.PACKED_END_SLUDGE_WALL, ModBlocks.PACKED_END_SLUDGE);
 
-        withExistingParent(ModBlocks.CHORUS_TURF.getId().getPath(),
-                modLoc("block/chorus_turf")); // Uses the block model as the item model
     }
 
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {

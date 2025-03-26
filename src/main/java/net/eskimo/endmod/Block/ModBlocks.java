@@ -50,10 +50,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHORUS_TURF = registerBlock("chorus_turf",
             ()-> new Block(BlockBehaviour.Properties.of()
                     .strength(0.5F)
-                    .emissiveRendering((state, world, pos) -> true)
+                    //.emissiveRendering((state, world, pos) -> true)
                     .friction(0.65F)
-                    .requiresCorrectToolForDrops()
-                    .lightLevel(state -> 7)));
+                    .requiresCorrectToolForDrops()));
+                    //.lightLevel(state -> 7)));
+
+    public static final RegistryObject<TallGrassBlock> VOID_GRASS = registerBlock("void_grass",
+            ()-> new TallGrassBlock((BlockBehaviour.Properties.of()
+                    .sound(SoundType.MOSS).noCollission())));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
