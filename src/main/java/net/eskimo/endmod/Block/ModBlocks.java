@@ -1,5 +1,6 @@
 package net.eskimo.endmod.Block;
 
+import net.eskimo.endmod.Block.custom.ChorusTurf;
 import net.eskimo.endmod.EndMod;
 import net.eskimo.endmod.items.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -47,8 +48,8 @@ public class ModBlocks {
     public static final RegistryObject<WallBlock> PACKED_END_SLUDGE_WALL = registerBlock("packed_end_sludge_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of().strength(2).requiresCorrectToolForDrops().sound(SoundType.PACKED_MUD)));
 
-    public static final RegistryObject<Block> CHORUS_TURF = registerBlock("chorus_turf",
-            ()-> new Block(BlockBehaviour.Properties.of()
+    public static final RegistryObject<GrassBlock> CHORUS_TURF = registerBlock("chorus_turf",
+            ()-> new GrassBlock(BlockBehaviour.Properties.of()
                     .strength(0.5F)
                     //.emissiveRendering((state, world, pos) -> true)
                     .friction(0.65F)
@@ -56,8 +57,7 @@ public class ModBlocks {
                     //.lightLevel(state -> 7)));
 
     public static final RegistryObject<TallGrassBlock> VOID_GRASS = registerBlock("void_grass",
-            ()-> new TallGrassBlock((BlockBehaviour.Properties.of()
-                    .sound(SoundType.MOSS).noCollission())));
+            ()-> new TallGrassBlock((BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS))));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

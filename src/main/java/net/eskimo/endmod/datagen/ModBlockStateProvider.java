@@ -4,6 +4,7 @@ import net.eskimo.endmod.Block.ModBlocks;
 import net.eskimo.endmod.EndMod;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.TallGrassBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -42,13 +43,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 modLoc("block/chorus_turf_bottom"),
                 modLoc("block/chorus_turf_top")
         ));
-        blockItem(ModBlocks.VOID_GRASS);
+
+        simpleBlockWithItem(ModBlocks.VOID_GRASS.get(), models().cross(
+                "void_grass",
+                modLoc("block/void_grass")
+        ));
     }
 
 
     private void blockWithItem(RegistryObject<Block>blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
+
+    //private void TallGrassBlockWithItem(RegistryObject<TallGrassBlock>blockRegistryObject) {
+    //    simpleBlockWithItem(blockRegistryObject.get(), models().cross(blockRegistryObject.get()));
+    //}
 
 
     private void blockItem(RegistryObject<? extends Block> blockRegistryObject) {
@@ -60,4 +69,5 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("endmod:block/" +
                 ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
+
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "endmod:block/packed_end_sludge_slab"
+    },
+    "type=double": {
+      "model": "endmod:block/packed_end_sludge"
+    },
+    "type=top": {
+      "model": "endmod:block/packed_end_sludge_slab_top"
+    }
+  }
+}

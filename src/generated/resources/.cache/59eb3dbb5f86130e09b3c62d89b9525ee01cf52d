@@ -1,0 +1,13 @@
+// 1.21	2025-04-07T17:19:11.0355722	Loot Tables
+81494e2c44d9668efaa9f0877f0e1455b7dd320d data/endmod/loot_table/blocks/block_of_smile.json
+49bedaa713dc102855297de52478c4c4b61e0513 data/endmod/loot_table/blocks/chorus_turf.json
+48e361e5f6e32fcffc5e0d1c66cd54cf938d4a2d data/endmod/loot_table/blocks/end_sludge.json
+a73e8e13feb75fa59d688150e74d7b74be70dcb6 data/endmod/loot_table/blocks/end_sludge_bricks.json
+277ef36ae364d58fe068541339d92b45fb826533 data/endmod/loot_table/blocks/end_sludge_bricks_slab.json
+fbe329d97c5406e649a5611bc9c5836722ebba71 data/endmod/loot_table/blocks/end_sludge_bricks_stairs.json
+11d3037d70edbb5261029d8169c645a7a66c6e72 data/endmod/loot_table/blocks/end_sludge_bricks_wall.json
+fcebf7b43bfb51c31bfcb2f5a52e7158a4aab2bd data/endmod/loot_table/blocks/packed_end_sludge.json
+f53caec99deb83134d9f03a81763a6cd94ce696e data/endmod/loot_table/blocks/packed_end_sludge_slab.json
+4bcb9efef1ca4ee92cca4a03d4bcf93cfa16b6ef data/endmod/loot_table/blocks/packed_end_sludge_stairs.json
+f84fb837b2881ed0855085f402d92d33717f4fb8 data/endmod/loot_table/blocks/packed_end_sludge_wall.json
+7be569eb61a449b9985ce59a70d0d0a66e7ea639 data/endmod/loot_table/blocks/void_grass.json

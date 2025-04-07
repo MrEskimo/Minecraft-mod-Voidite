@@ -5,7 +5,9 @@ import net.eskimo.endmod.items.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -23,7 +25,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.END_SLUDGE_BRICKS_WALL.get());
         dropSelf(ModBlocks.PACKED_END_SLUDGE_WALL.get());
         dropSelf(ModBlocks.CHORUS_TURF.get());
-        createShearsOnlyDrop(ModBlocks.VOID_GRASS.get());
+
+        this.add(ModBlocks.VOID_GRASS.get(),
+                createShearsOnlyDrop(ModBlocks.VOID_GRASS.get()));
+
 
         //ores
         this.add(ModBlocks.BLOCK_OF_SMILE.get(),

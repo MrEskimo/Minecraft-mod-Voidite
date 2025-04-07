@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "endmod:block/end_sludge_bricks",
+    "side": "endmod:block/end_sludge_bricks",
+    "top": "endmod:block/end_sludge_bricks"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "endmod:block/end_sludge_bricks_slab"
+    },
+    "type=double": {
+      "model": "endmod:block/end_sludge_bricks"
+    },
+    "type=top": {
+      "model": "endmod:block/end_sludge_bricks_slab_top"
+    }
+  }
+}

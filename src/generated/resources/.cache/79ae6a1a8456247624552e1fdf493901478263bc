@@ -1,0 +1,5 @@
+// 1.21	2025-03-22T11:19:08.855641	Tags for minecraft:block mod id endmod
+da856b7afeac2771c5c1bc1577623813a93c48fd data/minecraft/tags/block/mineable/pickaxe.json
+41ad2a058ff30ae6733b1db97451308e5b0ac9c5 data/minecraft/tags/block/mineable/shovel.json
+f703df24280bbc7580f43cd52eb91d26b3e7eb59 data/minecraft/tags/block/needs_iron_tool.json
+df98b4b8b961545cfd9069ff1f9f15c16265b97e data/minecraft/tags/block/walls.json
