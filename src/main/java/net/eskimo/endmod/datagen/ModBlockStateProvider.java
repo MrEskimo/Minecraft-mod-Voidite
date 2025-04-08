@@ -3,7 +3,9 @@ package net.eskimo.endmod.datagen;
 import net.eskimo.endmod.Block.ModBlocks;
 import net.eskimo.endmod.EndMod;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.TallGrassBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -19,9 +21,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.BLOCK_OF_SMILE);
+        blockWithItem(ModBlocks.AMOGUS);
+
         blockWithItem(ModBlocks.END_SLUDGE);
         blockWithItem(ModBlocks.END_SLUDGE_BRICKS);
         blockWithItem(ModBlocks.PACKED_END_SLUDGE);
+        blockWithItem(ModBlocks.PURPUR_LIGHT);
+
 
         stairsBlock(ModBlocks.END_SLUDGE_BRICKS_STAIRS.get(), blockTexture(ModBlocks.END_SLUDGE_BRICKS.get()));
         wallBlock(ModBlocks.END_SLUDGE_BRICKS_WALL.get(), blockTexture(ModBlocks.END_SLUDGE_BRICKS.get()));
@@ -36,7 +42,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.PACKED_END_SLUDGE_STAIRS);
         blockItem(ModBlocks.PACKED_END_SLUDGE_SLAB);
 
-        //blockWithItem(ModBlocks.CHORUS_TURF);
         simpleBlockWithItem(ModBlocks.CHORUS_TURF.get(), models().cubeBottomTop(
                 "chorus_turf",
                 modLoc("block/chorus_turf"),
@@ -48,16 +53,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 "void_grass",
                 modLoc("block/void_grass")
         ));
+
+        simpleBlockWithItem(ModBlocks.END_STONE_BRICK_PILLAR.get(), models().cubeColumn(
+                "end_stone_brick_pillar",
+                modLoc("block/end_stone_brick_pillar_side"),
+                modLoc("block/end_stone_brick_pillar_end")
+        ));
+
+        simpleBlockWithItem(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get(), models().cubeColumn(
+                "chiseled_end_stone_brick_pillar",
+                modLoc("block/chiseled_end_stone_brick_pillar"),
+                modLoc("block/end_stone_brick_pillar_end")
+        ));
+
     }
 
 
     private void blockWithItem(RegistryObject<Block>blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
-
-    //private void TallGrassBlockWithItem(RegistryObject<TallGrassBlock>blockRegistryObject) {
-    //    simpleBlockWithItem(blockRegistryObject.get(), models().cross(blockRegistryObject.get()));
-    //}
 
 
     private void blockItem(RegistryObject<? extends Block> blockRegistryObject) {

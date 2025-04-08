@@ -2,11 +2,16 @@
   "item.endmod.smile": "Smile",
 
   "block.endmod.block_of_smile": "Block of smiles",
+  "block.endmod.amogus": "Amogus, Sus",
+
   "block.endmod.packed_end_sludge": "Packed End Sludge",
   "block.endmod.end_sludge": "End Sludge",
   "block.endmod.end_sludge_bricks": "End Sludge Bricks",
   "block.endmod.chorus_turf": "Chorus Turf",
   "block.endmod.void_grass": "Void Grass",
+  "block.endmod.end_stone_brick_pillar": "End Stone Brick Pillar",
+  "block.endmod.chiseled_end_stone_brick_pillar": "Chiseled End Stone Brick Pillar",
+  "block.endmod.purpur_light": "Purpur Lamp",
 
   "block.endmod.end_sludge_bricks_slab": "End Sludge Bricks Slab",
   "block.endmod.end_sludge_bricks_stairs": "End Sludge Bricks Stairs",

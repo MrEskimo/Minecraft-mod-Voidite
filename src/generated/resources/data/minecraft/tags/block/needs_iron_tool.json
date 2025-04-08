@@ -8,6 +8,9 @@
     "endmod:packed_end_sludge",
     "endmod:packed_end_sludge_wall",
     "endmod:packed_end_sludge_slab",
+    "endmod:end_stone_brick_pillar",
+    "endmod:chorus_turf",
+    "endmod:chiseled_end_stone_brick_pillar",
     "endmod:packed_end_sludge_stairs"
   ]
 }

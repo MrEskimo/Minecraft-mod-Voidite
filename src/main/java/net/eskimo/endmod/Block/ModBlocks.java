@@ -1,6 +1,6 @@
 package net.eskimo.endmod.Block;
 
-import net.eskimo.endmod.Block.custom.ChorusTurf;
+import net.eskimo.endmod.Block.custom.CustomGrass;
 import net.eskimo.endmod.EndMod;
 import net.eskimo.endmod.items.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -21,6 +21,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLOCK_OF_SMILE = registerBlock("block_of_smile",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(1f).requiresCorrectToolForDrops().sound(SoundType.BASALT)));
+    public static final RegistryObject<Block> AMOGUS = registerBlock("amogus",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(1f).requiresCorrectToolForDrops().sound(SoundType.BASALT).noLootTable()));
+
+
     //try to make end sludge emissive or work like mud
     public static final RegistryObject<Block> END_SLUDGE = registerBlock("end_sludge",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -48,8 +53,8 @@ public class ModBlocks {
     public static final RegistryObject<WallBlock> PACKED_END_SLUDGE_WALL = registerBlock("packed_end_sludge_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of().strength(2).requiresCorrectToolForDrops().sound(SoundType.PACKED_MUD)));
 
-    public static final RegistryObject<GrassBlock> CHORUS_TURF = registerBlock("chorus_turf",
-            ()-> new GrassBlock(BlockBehaviour.Properties.of()
+    public static final RegistryObject<CustomGrass> CHORUS_TURF = registerBlock("chorus_turf",
+            ()-> new CustomGrass(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)
                     .strength(0.5F)
                     //.emissiveRendering((state, world, pos) -> true)
                     .friction(0.65F)
@@ -58,6 +63,15 @@ public class ModBlocks {
 
     public static final RegistryObject<TallGrassBlock> VOID_GRASS = registerBlock("void_grass",
             ()-> new TallGrassBlock((BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS))));
+
+    public static final RegistryObject<Block> END_STONE_BRICK_PILLAR = registerBlock("end_stone_brick_pillar",
+            ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE_BRICKS).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> CHISELED_END_STONE_BRICK_PILLAR = registerBlock("chiseled_end_stone_brick_pillar",
+            ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE_BRICKS).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> PURPUR_LIGHT = registerBlock("purpur_light",
+            ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PEARLESCENT_FROGLIGHT).sound(SoundType.STONE)));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

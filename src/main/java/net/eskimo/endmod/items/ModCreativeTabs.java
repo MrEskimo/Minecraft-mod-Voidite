@@ -28,7 +28,10 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.END_SLUDGE_BRICKS_SLAB.get());
                         output.accept(ModBlocks.END_SLUDGE_BRICKS_WALL.get());
                         output.accept(ModBlocks.CHORUS_TURF.get());
-                        output.accept(ModBlocks.BLOCK_OF_SMILE.get());
+                        output.accept(ModBlocks.VOID_GRASS.get());
+                        output.accept(ModBlocks.END_STONE_BRICK_PILLAR.get());
+                        output.accept(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get());
+                        output.accept(ModBlocks.PURPUR_LIGHT.get());
 
 
                     }).build());

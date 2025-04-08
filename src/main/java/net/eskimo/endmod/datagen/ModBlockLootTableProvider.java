@@ -24,10 +24,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.PACKED_END_SLUDGE.get());
         dropSelf(ModBlocks.END_SLUDGE_BRICKS_WALL.get());
         dropSelf(ModBlocks.PACKED_END_SLUDGE_WALL.get());
-        dropSelf(ModBlocks.CHORUS_TURF.get());
+        dropSelf(ModBlocks.END_STONE_BRICK_PILLAR.get());
+        dropSelf(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get());
+        dropSelf(ModBlocks.PURPUR_LIGHT.get());
 
         this.add(ModBlocks.VOID_GRASS.get(),
                 createShearsOnlyDrop(ModBlocks.VOID_GRASS.get()));
+
+        this.add(ModBlocks.CHORUS_TURF.get(),
+                createSilkTouchOnlyTable(ModBlocks.CHORUS_TURF.get()));
 
 
         //ores
