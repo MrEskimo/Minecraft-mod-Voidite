@@ -72,6 +72,26 @@ public class ModBlocks {
     public static final RegistryObject<Block> PURPUR_LIGHT = registerBlock("purpur_light",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PEARLESCENT_FROGLIGHT).sound(SoundType.STONE)));
 
+    public static final RegistryObject<Block> VOIDITE_ORE = registerBlock("voidite_ore",
+            ()-> new Block(BlockBehaviour.Properties.of().strength(1f).requiresCorrectToolForDrops()
+                    .emissiveRendering((state, world, pos) -> true)
+                    .lightLevel(state -> 7)));
+
+    public static final RegistryObject<Block> BLOCK_OF_VOIDITE = registerBlock("block_of_voidite",
+            ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops()));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

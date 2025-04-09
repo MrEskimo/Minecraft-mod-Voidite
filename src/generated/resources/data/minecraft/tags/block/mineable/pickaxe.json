@@ -9,6 +9,8 @@
     "endmod:packed_end_sludge_wall",
     "endmod:packed_end_sludge",
     "endmod:end_stone_brick_pillar",
+    "endmod:voidite_ore",
+    "endmod:block_of_voidite",
     "endmod:chiseled_end_stone_brick_pillar"
   ]
 }

@@ -31,6 +31,10 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.VOID_GRASS.get());
                         output.accept(ModBlocks.END_STONE_BRICK_PILLAR.get());
                         output.accept(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get());
+                        output.accept(ModBlocks.VOIDITE_ORE.get());
+                        output.accept(ModItems.RAW_VOIDITE.get());
+                        output.accept(ModItems.VOIDITE_INGOT.get());
+                        output.accept(ModBlocks.BLOCK_OF_VOIDITE.get());
                         output.accept(ModBlocks.PURPUR_LIGHT.get());
 
 

@@ -1,5 +1,7 @@
 {
   "item.endmod.smile": "Smile",
+  "item.endmod.raw_voidite": "Raw Voidite",
+  "item.endmod.voidite_ingot": "Voidite Ingot",
 
   "block.endmod.block_of_smile": "Block of smiles",
   "block.endmod.amogus": "Amogus, Sus",
@@ -12,6 +14,8 @@
   "block.endmod.end_stone_brick_pillar": "End Stone Brick Pillar",
   "block.endmod.chiseled_end_stone_brick_pillar": "Chiseled End Stone Brick Pillar",
   "block.endmod.purpur_light": "Purpur Lamp",
+  "block.endmod.voidite_ore": "Voidite Ore",
+  "block.endmod.block_of_voidite": "Block Of Voidite",
 
   "block.endmod.end_sludge_bricks_slab": "End Sludge Bricks Slab",
   "block.endmod.end_sludge_bricks_stairs": "End Sludge Bricks Stairs",

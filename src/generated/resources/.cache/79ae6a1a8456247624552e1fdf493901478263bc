@@ -1,5 +1,6 @@
-// 1.21	2025-04-08T18:37:37.1198615	Tags for minecraft:block mod id endmod
-df93a2dc6d6fa40ef8b06db105ef77c0d87c02e2 data/minecraft/tags/block/mineable/pickaxe.json
+// 1.21	2025-04-09T17:46:24.7779628	Tags for minecraft:block mod id endmod
+db6f4c58cd53951168a7c3da63c72bb38871241b data/minecraft/tags/block/mineable/pickaxe.json
 52768292c6d18d727e9da3ac09f37a44ba883142 data/minecraft/tags/block/mineable/shovel.json
+b23db82101e2ef594c6712ae5dbc1dd7b5cffcb1 data/minecraft/tags/block/needs_diamond_tool.json
 53ebd2ef5fea2ea1ab8cd2462bc2da3e06740e7c data/minecraft/tags/block/needs_iron_tool.json
 df98b4b8b961545cfd9069ff1f9f15c16265b97e data/minecraft/tags/block/walls.json

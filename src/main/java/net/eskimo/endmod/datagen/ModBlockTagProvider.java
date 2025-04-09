@@ -28,6 +28,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.PACKED_END_SLUDGE_WALL.get())
                 .add(ModBlocks.PACKED_END_SLUDGE.get())
                 .add(ModBlocks.END_STONE_BRICK_PILLAR.get())
+                .add(ModBlocks.VOIDITE_ORE.get())
+                .add(ModBlocks.BLOCK_OF_VOIDITE.get())
                 .add(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get());
 
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
@@ -47,6 +49,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.CHORUS_TURF.get())
                 .add(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get())
                 .add(ModBlocks.PACKED_END_SLUDGE_STAIRS.get());
+
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.VOIDITE_ORE.get())
+                .add(ModBlocks.BLOCK_OF_VOIDITE.get());
 
         tag(BlockTags.WALLS)
                 .add(ModBlocks.END_SLUDGE_BRICKS_WALL.get())

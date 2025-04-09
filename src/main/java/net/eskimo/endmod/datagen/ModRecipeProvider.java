@@ -8,10 +8,10 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
@@ -21,6 +21,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
         protected void buildRecipes(RecipeOutput pRecipeOutput) {
+            List<ItemLike> VOIDITE_SMELTABLES = List.of(ModItems.RAW_VOIDITE.get(),
+                    ModBlocks.VOIDITE_ORE.get());
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOCK_OF_SMILE.get())
                 .pattern("AAA")
@@ -59,9 +61,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', Blocks.END_STONE_BRICK_SLAB)
                 .unlockedBy(getHasName(Blocks.END_STONE_BRICK_SLAB), has(Blocks.END_STONE_BRICK_SLAB)).save(pRecipeOutput);
 
-        //stonecutterResultFromBase();
-
-         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get())
                .pattern("BBB")
                .pattern("BAB")
                .pattern("BBB")
@@ -69,6 +69,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                .define('B', Blocks.QUARTZ_PILLAR)
               .unlockedBy(getHasName(ModBlocks.END_STONE_BRICK_PILLAR.get()), has(ModBlocks.END_STONE_BRICK_PILLAR.get())).save(pRecipeOutput);
 
+        oreSmelting(pRecipeOutput, VOIDITE_SMELTABLES, RecipeCategory.MISC, ModItems.VOIDITE_INGOT.get(), 1f, 300, "voidite");
+        oreBlasting(pRecipeOutput, VOIDITE_SMELTABLES, RecipeCategory.MISC, ModItems.VOIDITE_INGOT.get(), 3f, 150, "voidite");
+        nineBlockStorageRecipes(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModItems.VOIDITE_INGOT.get(), RecipeCategory.MISC, ModBlocks.BLOCK_OF_VOIDITE.get());
 
     }
 }

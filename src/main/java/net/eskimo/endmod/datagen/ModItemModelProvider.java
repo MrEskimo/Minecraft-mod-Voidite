@@ -21,6 +21,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.SMILE.get());
+        basicItem(ModItems.RAW_VOIDITE.get());
+        basicItem(ModItems.VOIDITE_INGOT.get());
         basicItem(ModBlocks.VOID_GRASS.getId());
 
         wallItem(ModBlocks.END_SLUDGE_BRICKS_WALL, ModBlocks.END_SLUDGE_BRICKS);

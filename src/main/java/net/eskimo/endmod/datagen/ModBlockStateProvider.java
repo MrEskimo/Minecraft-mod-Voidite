@@ -3,10 +3,7 @@ package net.eskimo.endmod.datagen;
 import net.eskimo.endmod.Block.ModBlocks;
 import net.eskimo.endmod.EndMod;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.TallGrassBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -27,6 +24,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.END_SLUDGE_BRICKS);
         blockWithItem(ModBlocks.PACKED_END_SLUDGE);
         blockWithItem(ModBlocks.PURPUR_LIGHT);
+
+        blockWithItem(ModBlocks.VOIDITE_ORE);
+        blockWithItem(ModBlocks.BLOCK_OF_VOIDITE);
 
 
         stairsBlock(ModBlocks.END_SLUDGE_BRICKS_STAIRS.get(), blockTexture(ModBlocks.END_SLUDGE_BRICKS.get()));
