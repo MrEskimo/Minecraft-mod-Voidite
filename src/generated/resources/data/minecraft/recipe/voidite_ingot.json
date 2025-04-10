@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "endmod:block_of_voidite"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "endmod:voidite_ingot"
+  }
+}
