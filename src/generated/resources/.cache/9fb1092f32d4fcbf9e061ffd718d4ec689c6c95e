@@ -1,4 +1,4 @@
-// 1.21	2025-04-09T17:46:24.7794691	Recipes
+// 1.21	2025-04-11T12:18:48.6481896	Recipes
 7a9dd1087c45c306ed0154a8e63f1d193523b576 data/endmod/advancement/recipes/building_blocks/block_of_smile.json
 f71d8eb1a7ab8e973a777bafbf39790efcd9b237 data/endmod/advancement/recipes/building_blocks/chiseled_end_stone_brick_pillar.json
 0d0ca0ca781a78621c8b02b0007a5901ab8619e1 data/endmod/advancement/recipes/building_blocks/end_sludge_bricks.json
@@ -10,6 +10,7 @@ f5d7e73704f7e995141d6593303336eac7ece010 data/endmod/advancement/recipes/buildin
 f4aa77fd4538954d630df8fee27d2425e13d49a0 data/endmod/advancement/recipes/building_blocks/packed_end_sludge_slab.json
 f20ef367cde70ef5b68225bffdfb558d1811b5dd data/endmod/advancement/recipes/building_blocks/packed_end_sludge_stairs.json
 2824aab86169524a6d86d3a3166dbe2417f75192 data/endmod/advancement/recipes/building_blocks/packed_end_sludge_wall.json
+74e9becebe57710704bfc3402437eb71eaa2ecb6 data/endmod/advancement/recipes/building_blocks/purpur_light.json
 9c621152c933bf755b5554144ef4ea10a8037139 data/endmod/advancement/recipes/misc/smile.json
 ea839d6ab1d2e328e5760ffdbee629f1396fa5d5 data/endmod/recipe/block_of_smile.json
 b3de61d974b7e660d1dc25fdfaeb1eae3b934df0 data/endmod/recipe/chiseled_end_stone_brick_pillar.json
@@ -22,6 +23,7 @@ d3f329d96b822855a0351412cff9d96d84377b84 data/endmod/recipe/end_stone_brick_pill
 f4ef85c808b6048d076dd3499feb4ad5d75ae02b data/endmod/recipe/packed_end_sludge_slab.json
 dad94ffe801bb2e90b9d5fcea9f3ed2beb27c733 data/endmod/recipe/packed_end_sludge_stairs.json
 724c15d4333e983bc93b34e574a0d51eb471e72a data/endmod/recipe/packed_end_sludge_wall.json
+47825d8b5b1f934e484812bee8541482a22d1850 data/endmod/recipe/purpur_light.json
 87fef5f0b6dde4cdfa736704a84b149732c47003 data/endmod/recipe/smile.json
 0430ae13ac98e9996c014eab2c0f479bebd9f97f data/minecraft/advancement/recipes/building_blocks/voidite_ingot.json
 19881e4a13d940e3e964cb290b29f4e54deae91c data/minecraft/advancement/recipes/misc/block_of_voidite.json

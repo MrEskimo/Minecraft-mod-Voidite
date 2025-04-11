@@ -2,6 +2,7 @@
   "item.endmod.smile": "Smile",
   "item.endmod.raw_voidite": "Raw Voidite",
   "item.endmod.voidite_ingot": "Voidite Ingot",
+  "item.endmod.glowing_void_berries": "Glowing Void Berries",
 
   "block.endmod.block_of_smile": "Block of smiles",
   "block.endmod.amogus": "Amogus, Sus",
@@ -16,6 +17,7 @@
   "block.endmod.purpur_light": "Purpur Lamp",
   "block.endmod.voidite_ore": "Voidite Ore",
   "block.endmod.block_of_voidite": "Block Of Voidite",
+  "block.endmod.glowing_void_berry_bush": "Glowing Void Berry Bush",
 
   "block.endmod.end_sludge_bricks_slab": "End Sludge Bricks Slab",
   "block.endmod.end_sludge_bricks_stairs": "End Sludge Bricks Stairs",

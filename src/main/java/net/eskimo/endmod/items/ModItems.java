@@ -1,7 +1,9 @@
 package net.eskimo.endmod.items;
 
+import net.eskimo.endmod.Block.ModBlocks;
 import net.eskimo.endmod.EndMod;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,6 +21,9 @@ public class ModItems {
             () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> VOIDITE_INGOT = ITEMS.register("voidite_ingot",
             ()-> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
+
+    public static final RegistryObject<Item> GLOWING_VOID_BERRIES = ITEMS.register("glowing_void_berries",
+            () -> new ItemNameBlockItem(ModBlocks.GLOWING_VOID_BERRY_BUSH.get(), new Item.Properties().food(ModFoodProperties.GLOWING_VOID_BERRY)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

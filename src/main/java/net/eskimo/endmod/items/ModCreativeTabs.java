@@ -36,6 +36,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.VOIDITE_INGOT.get());
                         output.accept(ModBlocks.BLOCK_OF_VOIDITE.get());
                         output.accept(ModBlocks.PURPUR_LIGHT.get());
+                        output.accept(ModItems.GLOWING_VOID_BERRIES.get());
 
 
                     }).build());

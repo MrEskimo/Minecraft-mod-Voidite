@@ -73,5 +73,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pRecipeOutput, VOIDITE_SMELTABLES, RecipeCategory.MISC, ModItems.VOIDITE_INGOT.get(), 3f, 150, "voidite");
         nineBlockStorageRecipes(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModItems.VOIDITE_INGOT.get(), RecipeCategory.MISC, ModBlocks.BLOCK_OF_VOIDITE.get());
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPUR_LIGHT.get())
+                .pattern("ABA")
+                .pattern("BCB")
+                .pattern("ABA")
+                .define('B', Items.CHORUS_FRUIT)
+                .define('A', Items.POPPED_CHORUS_FRUIT)
+                .define('C', Blocks.END_ROD)
+                .unlockedBy(getHasName(Items.CHORUS_FRUIT), has(Items.CHORUS_FRUIT)).save(pRecipeOutput);
     }
 }

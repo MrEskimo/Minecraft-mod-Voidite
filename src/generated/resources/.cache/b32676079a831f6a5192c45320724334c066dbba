@@ -1,4 +1,4 @@
-// 1.21	2025-04-09T17:46:24.7759601	Block States: endmod
+// 1.21	2025-04-11T15:12:29.2601242	Block States: endmod
 a6aa6ea1d04032ed362811815f397f8145f6a11f assets/endmod/blockstates/amogus.json
 32d371dfc3a5ef239a2d1a1e32fff9bdc00839c6 assets/endmod/blockstates/block_of_smile.json
 99aecccfec8c0c7ae4e14c7b5c190198bf65c186 assets/endmod/blockstates/block_of_voidite.json
@@ -10,6 +10,7 @@ f581e0298bc8371d9be8182d053e67870675ba3a assets/endmod/blockstates/end_sludge_br
 36264b334d715c5675e7ee9768244ee4a5ff6f55 assets/endmod/blockstates/end_sludge_bricks_stairs.json
 a2d388b9afdf67f86403068fa6b883a18f4f5c22 assets/endmod/blockstates/end_sludge_bricks_wall.json
 4e157ffea195b0586447ea658e8f8969c7a43a55 assets/endmod/blockstates/end_stone_brick_pillar.json
+26fea200182e6bcb127204887dad023daca8808a assets/endmod/blockstates/glowing_void_berry_bush.json
 12af84f50acfc93884ff609041c1831f64e00d75 assets/endmod/blockstates/packed_end_sludge.json
 9af68d35015ca31b447b9d167b04781ed5e7cb9a assets/endmod/blockstates/packed_end_sludge_slab.json
 6bdc1f716b6eb90e6498595977a90b4a010aef26 assets/endmod/blockstates/packed_end_sludge_stairs.json
@@ -33,6 +34,10 @@ e61bcf7371d079fc9d1f50def029b108a4073614 assets/endmod/models/block/end_sludge_b
 3311194d6eb2891307ef85ed1bd0cab86524bcfa assets/endmod/models/block/end_sludge_bricks_wall_side.json
 2e9eb94455d0733088a3e7a75ae7abb40ba2c207 assets/endmod/models/block/end_sludge_bricks_wall_side_tall.json
 ad50fee4e45862fc32dc6c8a94879b52b9dd7446 assets/endmod/models/block/end_stone_brick_pillar.json
+0f417505533b6adb7a6549452efaba4d19a8f4c1 assets/endmod/models/block/glowing_void_berry_bush_stage0.json
+6e4c2c8fc39935dbc38cfe3a392c43480fdebaa0 assets/endmod/models/block/glowing_void_berry_bush_stage1.json
+f1af6620e6e49794addaa21a6c2ff6284e8a69ba assets/endmod/models/block/glowing_void_berry_bush_stage2.json
+c8534bcaa002d12ec5ddaaadcd0981bc2c097154 assets/endmod/models/block/glowing_void_berry_bush_stage3.json
 7deaf71aa0c064974d66fdb135ab4fedc7bc6381 assets/endmod/models/block/packed_end_sludge.json
 f52ec6977927989ca4ad6004d26e826316100bdd assets/endmod/models/block/packed_end_sludge_slab.json
 8ab78adfdfe82de3013a0aa41412a95153533e36 assets/endmod/models/block/packed_end_sludge_slab_top.json

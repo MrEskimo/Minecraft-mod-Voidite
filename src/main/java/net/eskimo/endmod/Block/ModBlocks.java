@@ -1,6 +1,7 @@
 package net.eskimo.endmod.Block;
 
 import net.eskimo.endmod.Block.custom.CustomGrass;
+import net.eskimo.endmod.Block.custom.GlowingVoidBerryBushBlock;
 import net.eskimo.endmod.EndMod;
 import net.eskimo.endmod.items.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -79,6 +80,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> BLOCK_OF_VOIDITE = registerBlock("block_of_voidite",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> GLOWING_VOID_BERRY_BUSH = BLOCKS.register("glowing_void_berry_bush",
+            () -> new GlowingVoidBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
 
 

@@ -1,6 +1,7 @@
 package net.eskimo.endmod.Block.custom;
 
 import net.eskimo.endmod.Block.ModBlocks;
+import net.eskimo.endmod.items.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -15,10 +16,14 @@ public class CustomGrass extends GrassBlock {
     public CustomGrass(Properties properties) {
         super(properties);
     }
-//PROBLEM CAN GROW NORMAL GRASS TRY TO FIX
+
     @Override
     public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, IPlantable plantable) {
-        return state.is(ModBlocks.CHORUS_TURF.get());
+        BlockState plant = plantable.getPlant(world, pos.relative(facing));
+        if (plant.getBlock() == ModBlocks.VOID_GRASS.get())
+            return state.is(ModBlocks.CHORUS_TURF.get());
+
+        return false;
     }
 }
 

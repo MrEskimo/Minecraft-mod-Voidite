@@ -1,4 +1,4 @@
-// 1.21	2025-04-09T17:46:24.7794691	Loot Tables
+// 1.21	2025-04-11T15:12:29.2636316	Loot Tables
 81494e2c44d9668efaa9f0877f0e1455b7dd320d data/endmod/loot_table/blocks/block_of_smile.json
 b99dcdf7cd72b0b495e0b54d7d91d8e8c5934a29 data/endmod/loot_table/blocks/block_of_voidite.json
 92654507233fd5bfa3f800c76e4d89238599d000 data/endmod/loot_table/blocks/chiseled_end_stone_brick_pillar.json
@@ -9,6 +9,7 @@ a73e8e13feb75fa59d688150e74d7b74be70dcb6 data/endmod/loot_table/blocks/end_sludg
 fbe329d97c5406e649a5611bc9c5836722ebba71 data/endmod/loot_table/blocks/end_sludge_bricks_stairs.json
 11d3037d70edbb5261029d8169c645a7a66c6e72 data/endmod/loot_table/blocks/end_sludge_bricks_wall.json
 d79d9a87d717015d8bbf7a8a41359ed2f6cafaa5 data/endmod/loot_table/blocks/end_stone_brick_pillar.json
+1b16a99a50579d305cecffe56eec6f4656eea278 data/endmod/loot_table/blocks/glowing_void_berry_bush.json
 fcebf7b43bfb51c31bfcb2f5a52e7158a4aab2bd data/endmod/loot_table/blocks/packed_end_sludge.json
 f53caec99deb83134d9f03a81763a6cd94ce696e data/endmod/loot_table/blocks/packed_end_sludge_slab.json
 4bcb9efef1ca4ee92cca4a03d4bcf93cfa16b6ef data/endmod/loot_table/blocks/packed_end_sludge_stairs.json
