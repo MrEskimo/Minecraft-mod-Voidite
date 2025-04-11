@@ -76,13 +76,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> VOIDITE_ORE = registerBlock("voidite_ore",
             ()-> new Block(BlockBehaviour.Properties.of().strength(1f).requiresCorrectToolForDrops()
                     .emissiveRendering((state, world, pos) -> true)
-                    .lightLevel(state -> 7)));
+                    .lightLevel(state -> 9)));
 
     public static final RegistryObject<Block> BLOCK_OF_VOIDITE = registerBlock("block_of_voidite",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> GLOWING_VOID_BERRY_BUSH = BLOCKS.register("glowing_void_berry_bush",
-            () -> new GlowingVoidBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
+            () -> new GlowingVoidBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)
+                    .emissiveRendering((pState, pLevel, pPos) -> true)
+                    .lightLevel(state -> 4)));
 
 
 
