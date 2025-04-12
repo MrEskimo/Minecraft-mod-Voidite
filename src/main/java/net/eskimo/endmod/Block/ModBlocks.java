@@ -1,5 +1,6 @@
 package net.eskimo.endmod.Block;
 
+import net.eskimo.endmod.Block.custom.ChiseledEndStoneBrickPillarBlock;
 import net.eskimo.endmod.Block.custom.CustomGrass;
 import net.eskimo.endmod.Block.custom.GlowingVoidBerryBushBlock;
 import net.eskimo.endmod.EndMod;
@@ -26,8 +27,6 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(1f).requiresCorrectToolForDrops().sound(SoundType.BASALT).noLootTable()));
 
-
-    //try to make end sludge emissive or work like mud
     public static final RegistryObject<Block> END_SLUDGE = registerBlock("end_sludge",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(0.5f).requiresCorrectToolForDrops().sound(SoundType.MUD)));
@@ -57,10 +56,8 @@ public class ModBlocks {
     public static final RegistryObject<CustomGrass> CHORUS_TURF = registerBlock("chorus_turf",
             ()-> new CustomGrass(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)
                     .strength(0.5F)
-                    //.emissiveRendering((state, world, pos) -> true)
                     .friction(0.65F)
                     .requiresCorrectToolForDrops()));
-                    //.lightLevel(state -> 7)));
 
     public static final RegistryObject<TallGrassBlock> VOID_GRASS = registerBlock("void_grass",
             ()-> new TallGrassBlock((BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS))));
@@ -68,7 +65,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> END_STONE_BRICK_PILLAR = registerBlock("end_stone_brick_pillar",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE_BRICKS).sound(SoundType.STONE)));
     public static final RegistryObject<Block> CHISELED_END_STONE_BRICK_PILLAR = registerBlock("chiseled_end_stone_brick_pillar",
-            ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE_BRICKS).sound(SoundType.STONE)));
+            ()-> new ChiseledEndStoneBrickPillarBlock(BlockBehaviour.Properties.of().strength(3f)
+                    .lightLevel(state -> state.getValue(ChiseledEndStoneBrickPillarBlock.CLICKED) ? 15 : 0)));
 
     public static final RegistryObject<Block> PURPUR_LIGHT = registerBlock("purpur_light",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PEARLESCENT_FROGLIGHT).sound(SoundType.STONE)));
@@ -85,6 +83,7 @@ public class ModBlocks {
             () -> new GlowingVoidBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)
                     .emissiveRendering((pState, pLevel, pPos) -> true)
                     .lightLevel(state -> 4)));
+    //public static final RegistryObject<Block> SINCEHE_POTATO
 
 
 

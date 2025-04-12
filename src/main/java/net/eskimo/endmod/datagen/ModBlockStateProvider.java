@@ -1,6 +1,7 @@
 package net.eskimo.endmod.datagen;
 
 import net.eskimo.endmod.Block.ModBlocks;
+import net.eskimo.endmod.Block.custom.ChiseledEndStoneBrickPillarBlock;
 import net.eskimo.endmod.Block.custom.GlowingVoidBerryBushBlock;
 import net.eskimo.endmod.EndMod;
 import net.minecraft.data.PackOutput;
@@ -67,14 +68,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 modLoc("block/end_stone_brick_pillar_end")
         ));
 
-        simpleBlockWithItem(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get(), models().cubeColumn(
-                "chiseled_end_stone_brick_pillar",
-                modLoc("block/chiseled_end_stone_brick_pillar"),
-                modLoc("block/end_stone_brick_pillar_end")
-        ));
         
         makeBush(((SweetBerryBushBlock) ModBlocks.GLOWING_VOID_BERRY_BUSH.get()), "glowing_void_berry_bush_stage", "glowing_void_berry_bush_stage");
 
+        customLamp();
     }
 
 
@@ -104,21 +101,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 ResourceLocation.fromNamespaceAndPath(EndMod.MOD_ID, "block/" + textureName + state.getValue(((KohlrabiCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
-    }
+    *///}
 
     private void customLamp() {
-        getVariantBuilder(ModBlocks.ALEXANDRITE_LAMP.get()).forAllStates(state -> {
-            if(state.getValue(AlexandriteLampBlock.CLICKED)) {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("alexandrite_lamp_on",
-                        ResourceLocation.fromNamespaceAndPath(EndMod.MOD_ID, "block/" + "alexandrite_lamp_on")))};
+        getVariantBuilder(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get()).forAllStates(state -> {
+            if(state.getValue(ChiseledEndStoneBrickPillarBlock.CLICKED)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("chiseled_end_stone_brick_pillar_on",
+                        ResourceLocation.fromNamespaceAndPath(EndMod.MOD_ID, "block/" + "chiseled_end_stone_brick_pillar_on")))};
             } else {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("alexandrite_lamp_off",
-                        ResourceLocation.fromNamespaceAndPath(EndMod.MOD_ID, "block/" + "alexandrite_lamp_off")))};
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("chiseled_end_stone_brick_pillar_off",
+                        ResourceLocation.fromNamespaceAndPath(EndMod.MOD_ID, "block/" + "chiseled_end_stone_brick_pillar_off")))};
             }
         });
-        simpleBlockItem(ModBlocks.ALEXANDRITE_LAMP.get(), models().cubeAll("alexandrite_lamp_on",
-                ResourceLocation.fromNamespaceAndPath(EndMod.MOD_ID, "block/" + "alexandrite_lamp_on")));
-    *///}
+        simpleBlockItem(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get(), models().cubeAll("chiseled_end_stone_brick_pillar_off",
+                ResourceLocation.fromNamespaceAndPath(EndMod.MOD_ID, "block/" + "chiseled_end_stone_brick_pillar_off")));
+    }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));

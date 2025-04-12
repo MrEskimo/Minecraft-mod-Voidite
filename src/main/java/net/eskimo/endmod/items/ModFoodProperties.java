@@ -11,6 +11,8 @@ public class ModFoodProperties {
     public static final FoodProperties GLOWING_VOID_BERRY = new FoodProperties.Builder().nutrition(2).saturationModifier(0.1f)
             .effect(new MobEffectInstance(MobEffects.GLOWING, 24000),0.07f).fast()
             .effect(new MobEffectInstance(MobEffects.CONFUSION, 100),0.02f).fast().build();
+    public static final FoodProperties SINCEHE_POTATO = new FoodProperties.Builder().nutrition(7).saturationModifier(0.7f)
+            .effect(new MobEffectInstance(MobEffects.WATER_BREATHING, 1200), 1).build();
 
 
 

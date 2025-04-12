@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-      "model": "endmod:block/chiseled_end_stone_brick_pillar"
+    "clicked=false": {
+      "model": "endmod:block/chiseled_end_stone_brick_pillar_off"
+    },
+    "clicked=true": {
+      "model": "endmod:block/chiseled_end_stone_brick_pillar_on"
     }
   }
 }

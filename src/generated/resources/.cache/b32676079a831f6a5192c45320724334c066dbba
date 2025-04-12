@@ -1,8 +1,8 @@
-// 1.21	2025-04-11T15:12:29.2601242	Block States: endmod
+// 1.21	2025-04-12T12:33:18.5524429	Block States: endmod
 a6aa6ea1d04032ed362811815f397f8145f6a11f assets/endmod/blockstates/amogus.json
 32d371dfc3a5ef239a2d1a1e32fff9bdc00839c6 assets/endmod/blockstates/block_of_smile.json
 99aecccfec8c0c7ae4e14c7b5c190198bf65c186 assets/endmod/blockstates/block_of_voidite.json
-410b5c48e2f58f6c97bb5b7c802b2272dda7a783 assets/endmod/blockstates/chiseled_end_stone_brick_pillar.json
+213139bf28dedf454c2df63193be561368be7f9f assets/endmod/blockstates/chiseled_end_stone_brick_pillar.json
 f1219ff1d8f295f018ed33cab79d15a6b471c6c9 assets/endmod/blockstates/chorus_turf.json
 11b351a5e4513c352340ecbff7a85ee3a48a17ff assets/endmod/blockstates/end_sludge.json
 d46978e0a6d2f35eb07e06b0c1d857ae9d9727cb assets/endmod/blockstates/end_sludge_bricks.json
@@ -21,7 +21,8 @@ a2d388b9afdf67f86403068fa6b883a18f4f5c22 assets/endmod/blockstates/end_sludge_br
 e382ff56bd6e3049762379917a4e56a07d0d0c64 assets/endmod/models/block/amogus.json
 33bf653ca3343062afec4e928b4a0aeea494462a assets/endmod/models/block/block_of_smile.json
 be37e7f7163d08cd5bf367cc9ae51edad55c628e assets/endmod/models/block/block_of_voidite.json
-6b64768100ddfb251e5d155fce48285882e890c4 assets/endmod/models/block/chiseled_end_stone_brick_pillar.json
+bc37b7db9c1f61a911fb8846cdbe288ec8c66c65 assets/endmod/models/block/chiseled_end_stone_brick_pillar_off.json
+cd97556c1b2e7ab2f3bd607eb60b39a0b570cdfa assets/endmod/models/block/chiseled_end_stone_brick_pillar_on.json
 ec577694cbb87563480aa8f4b7ce37eca0f654ec assets/endmod/models/block/chorus_turf.json
 c2e20e9fd7db032a88c700fe92b19f686e867753 assets/endmod/models/block/end_sludge.json
 8c842056eaa57d8940b4a1dab357579b306cc07e assets/endmod/models/block/end_sludge_bricks.json
@@ -53,7 +54,7 @@ ab62030653b935759571b1bf19d8ed58dab85360 assets/endmod/models/block/void_grass.j
 c3f3c8e1dc59c954508367dad4ffefa982b9229b assets/endmod/models/item/amogus.json
 2f4d53bc93ab2bb26a1757c50336faa5aeb8dd50 assets/endmod/models/item/block_of_smile.json
 eb0d9bb2a0765cfed8f8eda03a3f8b8a13e31434 assets/endmod/models/item/block_of_voidite.json
-153d8cefb40faa2977afbc07e260c68cb7d54592 assets/endmod/models/item/chiseled_end_stone_brick_pillar.json
+fa264858473c2514cb20256e5ce89a5e77c9ac83 assets/endmod/models/item/chiseled_end_stone_brick_pillar.json
 291a8bc6d38395a6a2d444b3f39cbcb6b73f402f assets/endmod/models/item/chorus_turf.json
 911a30ec38f62f4d9019dbb7b03cbe0a62093648 assets/endmod/models/item/end_sludge.json
 1bc17c17ee94432973ed556f7a2b17869ad8eb51 assets/endmod/models/item/end_sludge_bricks.json
