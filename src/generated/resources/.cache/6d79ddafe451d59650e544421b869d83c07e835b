@@ -1,9 +1,10 @@
-// 1.21	2025-04-12T12:04:49.8558305	Item Models: endmod
+// 1.21	2025-04-12T13:50:28.6906088	Item Models: endmod
 6465c5ccbd4e9bfa102e341522afa50e4ebdfea8 assets/endmod/models/item/end_sludge_bricks_wall.json
 bb262bc7de1b0e4119c759fb4e56878fa450638d assets/endmod/models/item/glowing_void_berries.json
 3c90cacf478283d2ec598c186bebeee5c73a1287 assets/endmod/models/item/packed_end_sludge_wall.json
 60da31f7f0d882511ed74d098fd2f86386628f8d assets/endmod/models/item/raw_voidite.json
 4d293a420a52294ff693558641c1da72fe2a7620 assets/endmod/models/item/sincehe_potato.json
+6c643e4b70ce31a3a679fb316458c63f89d88eb8 assets/endmod/models/item/sincehe_potato_seeds.json
 4e9b3d982ba270f16b6d7d6215c2cf8dc22bcca0 assets/endmod/models/item/smile.json
 9b93814f3e0cfa193c2f641174b75d6cb2f2ee72 assets/endmod/models/item/voidite_ingot.json
 6c4b05f5df8d1959ed5d0524f17f2a2db44a6780 assets/endmod/models/item/void_grass.json

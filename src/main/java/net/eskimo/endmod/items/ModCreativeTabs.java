@@ -38,6 +38,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.PURPUR_LIGHT.get());
                         output.accept(ModItems.GLOWING_VOID_BERRIES.get());
                         output.accept(ModItems.SINCEHE_POTATO.get());
+                        output.accept(ModItems.SINCEHE_POTATO_SEEDS.get());
 
 
                     }).build());

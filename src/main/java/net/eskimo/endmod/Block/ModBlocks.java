@@ -3,6 +3,7 @@ package net.eskimo.endmod.Block;
 import net.eskimo.endmod.Block.custom.ChiseledEndStoneBrickPillarBlock;
 import net.eskimo.endmod.Block.custom.CustomGrass;
 import net.eskimo.endmod.Block.custom.GlowingVoidBerryBushBlock;
+import net.eskimo.endmod.Block.custom.SincehePotatoCropBlock;
 import net.eskimo.endmod.EndMod;
 import net.eskimo.endmod.items.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -83,7 +84,8 @@ public class ModBlocks {
             () -> new GlowingVoidBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)
                     .emissiveRendering((pState, pLevel, pPos) -> true)
                     .lightLevel(state -> 4)));
-    //public static final RegistryObject<Block> SINCEHE_POTATO
+    public static final RegistryObject<Block> SINCEHE_POTATO_CROP = BLOCKS.register("sincehe_potato_crop",
+            () -> new SincehePotatoCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
 
 

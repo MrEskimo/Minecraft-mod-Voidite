@@ -3,10 +3,12 @@ package net.eskimo.endmod.datagen;
 import net.eskimo.endmod.Block.ModBlocks;
 import net.eskimo.endmod.Block.custom.ChiseledEndStoneBrickPillarBlock;
 import net.eskimo.endmod.Block.custom.GlowingVoidBerryBushBlock;
+import net.eskimo.endmod.Block.custom.SincehePotatoCropBlock;
 import net.eskimo.endmod.EndMod;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -72,6 +74,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeBush(((SweetBerryBushBlock) ModBlocks.GLOWING_VOID_BERRY_BUSH.get()), "glowing_void_berry_bush_stage", "glowing_void_berry_bush_stage");
 
         customLamp();
+
+        makeCrop(((CropBlock) ModBlocks.SINCEHE_POTATO_CROP.get()), "sincehe_potato_crop_stage", "sincehe_potato_crop_stage");
     }
 
 
@@ -89,7 +93,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         return models;
     }
 
-   /* public void makeCrop(CropBlock block, String modelName, String textureName) {
+    public void makeCrop(CropBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, modelName, textureName);
 
         getVariantBuilder(block).forAllStates(function);
@@ -97,11 +101,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((KohlrabiCropBlock) block).getAgeProperty()),
-                ResourceLocation.fromNamespaceAndPath(EndMod.MOD_ID, "block/" + textureName + state.getValue(((KohlrabiCropBlock) block).getAgeProperty()))).renderType("cutout"));
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((SincehePotatoCropBlock) block).getAgeProperty()),
+                ResourceLocation.fromNamespaceAndPath(EndMod.MOD_ID, "block/" + textureName + state.getValue(((SincehePotatoCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
-    *///}
+    }
 
     private void customLamp() {
         getVariantBuilder(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get()).forAllStates(state -> {

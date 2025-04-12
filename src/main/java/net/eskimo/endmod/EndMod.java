@@ -5,6 +5,7 @@ import net.eskimo.endmod.Block.ModBlocks;
 import net.eskimo.endmod.items.ModCreativeTabs;
 import net.eskimo.endmod.items.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -46,7 +47,10 @@ public class EndMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)  {
-
+        event.enqueueWork(()-> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.SINCEHE_POTATO.get(), 0.3f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.SINCEHE_POTATO_SEEDS.get(), 0.1f);
+        });
     }
 
     // Add the example block item to the building blocks tab

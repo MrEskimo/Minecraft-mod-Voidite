@@ -24,8 +24,11 @@ public class ModItems {
 
     public static final RegistryObject<Item> GLOWING_VOID_BERRIES = ITEMS.register("glowing_void_berries",
             () -> new ItemNameBlockItem(ModBlocks.GLOWING_VOID_BERRY_BUSH.get(), new Item.Properties().food(ModFoodProperties.GLOWING_VOID_BERRY)));
+
     public static final RegistryObject<Item> SINCEHE_POTATO = ITEMS.register("sincehe_potato",
             () -> new Item(new Item.Properties().food(ModFoodProperties.SINCEHE_POTATO)));
+    public static final RegistryObject<Item> SINCEHE_POTATO_SEEDS = ITEMS.register("sincehe_potato_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.SINCEHE_POTATO_CROP.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

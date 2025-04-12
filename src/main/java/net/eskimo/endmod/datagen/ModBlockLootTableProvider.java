@@ -1,6 +1,7 @@
 package net.eskimo.endmod.datagen;
 
 import net.eskimo.endmod.Block.ModBlocks;
+import net.eskimo.endmod.Block.custom.SincehePotatoCropBlock;
 import net.eskimo.endmod.items.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
@@ -17,6 +18,7 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -77,6 +79,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
                                 .apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
                 )));
+
+        LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.SINCEHE_POTATO_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SincehePotatoCropBlock.AGE, SincehePotatoCropBlock.MAX_AGE));
+
+        this.add(ModBlocks.SINCEHE_POTATO_CROP.get(), this.createCropDrops(ModBlocks.SINCEHE_POTATO_CROP.get(),
+                ModItems.SINCEHE_POTATO.get(), ModItems.SINCEHE_POTATO_SEEDS.get(), lootItemConditionBuilder));
     }
 
     @Override

@@ -1,4 +1,4 @@
-// 1.21	2025-04-11T15:12:29.2636316	Loot Tables
+// 1.21	2025-04-12T13:57:06.9878859	Loot Tables
 81494e2c44d9668efaa9f0877f0e1455b7dd320d data/endmod/loot_table/blocks/block_of_smile.json
 b99dcdf7cd72b0b495e0b54d7d91d8e8c5934a29 data/endmod/loot_table/blocks/block_of_voidite.json
 92654507233fd5bfa3f800c76e4d89238599d000 data/endmod/loot_table/blocks/chiseled_end_stone_brick_pillar.json
@@ -15,5 +15,6 @@ f53caec99deb83134d9f03a81763a6cd94ce696e data/endmod/loot_table/blocks/packed_en
 4bcb9efef1ca4ee92cca4a03d4bcf93cfa16b6ef data/endmod/loot_table/blocks/packed_end_sludge_stairs.json
 f84fb837b2881ed0855085f402d92d33717f4fb8 data/endmod/loot_table/blocks/packed_end_sludge_wall.json
 80e4d26e788cc7138201601f28e340c4adb425cb data/endmod/loot_table/blocks/purpur_light.json
+ee487baa44c2d540e42ea13e20a0271f496b1a29 data/endmod/loot_table/blocks/sincehe_potato_crop.json
 31410bbf9cdaa0a59e5169dcc687e418db37fad2 data/endmod/loot_table/blocks/voidite_ore.json
 7be569eb61a449b9985ce59a70d0d0a66e7ea639 data/endmod/loot_table/blocks/void_grass.json
