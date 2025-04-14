@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "voiditemod:block/chorus_turf_bottom",
+    "side": "voiditemod:block/chorus_turf",
+    "top": "voiditemod:block/chorus_turf_top"
+  }
+}

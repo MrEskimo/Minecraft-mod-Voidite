@@ -5,9 +5,9 @@
   "experience": 3.0,
   "group": "voidite",
   "ingredient": {
-    "item": "endmod:voidite_ore"
+    "item": "voiditemod:voidite_ore"
   },
   "result": {
-    "id": "endmod:voidite_ingot"
+    "id": "voiditemod:voidite_ingot"
   }
 }

@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "endmod:voidite_ingot"
+      "item": "voiditemod:voidite_ingot"
     }
   },
   "pattern": [
@@ -13,6 +13,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "endmod:block_of_voidite"
+    "id": "voiditemod:block_of_voidite"
   }
 }

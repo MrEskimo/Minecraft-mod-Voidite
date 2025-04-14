@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": "endmod:voidite_ingot"
+            "items": "voiditemod:voidite_ingot"
           }
         ]
       },

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "endmod:block/packed_end_sludge",
-    "side": "endmod:block/packed_end_sludge",
-    "top": "endmod:block/packed_end_sludge"
-  }
-}

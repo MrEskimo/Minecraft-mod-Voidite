@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "endmod:block_of_voidite"
+            "items": "voiditemod:block_of_voidite"
           }
         ]
       },

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "bottom": "endmod:block/chorus_turf_bottom",
-    "side": "endmod:block/chorus_turf",
-    "top": "endmod:block/chorus_turf_top"
-  }
-}

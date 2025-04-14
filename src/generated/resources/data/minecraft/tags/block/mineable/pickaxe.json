@@ -1,16 +1,16 @@
 {
   "values": [
-    "endmod:end_sludge_bricks",
-    "endmod:block_of_smile",
-    "endmod:end_sludge_bricks_stairs",
-    "endmod:end_sludge_bricks_slab",
-    "endmod:packed_end_sludge_slab",
-    "endmod:packed_end_sludge_stairs",
-    "endmod:packed_end_sludge_wall",
-    "endmod:packed_end_sludge",
-    "endmod:end_stone_brick_pillar",
-    "endmod:voidite_ore",
-    "endmod:block_of_voidite",
-    "endmod:chiseled_end_stone_brick_pillar"
+    "voiditemod:end_sludge_bricks",
+    "voiditemod:block_of_smile",
+    "voiditemod:end_sludge_bricks_stairs",
+    "voiditemod:end_sludge_bricks_slab",
+    "voiditemod:packed_end_sludge_slab",
+    "voiditemod:packed_end_sludge_stairs",
+    "voiditemod:packed_end_sludge_wall",
+    "voiditemod:packed_end_sludge",
+    "voiditemod:end_stone_brick_pillar",
+    "voiditemod:voidite_ore",
+    "voiditemod:block_of_voidite",
+    "voiditemod:chiseled_end_stone_brick_pillar"
   ]
 }

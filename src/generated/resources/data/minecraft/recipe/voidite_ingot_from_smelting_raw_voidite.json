@@ -5,9 +5,9 @@
   "experience": 1.0,
   "group": "voidite",
   "ingredient": {
-    "item": "endmod:raw_voidite"
+    "item": "voiditemod:raw_voidite"
   },
   "result": {
-    "id": "endmod:voidite_ingot"
+    "id": "voiditemod:voidite_ingot"
   }
 }

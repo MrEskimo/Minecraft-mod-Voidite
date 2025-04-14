@@ -3,11 +3,11 @@
   "category": "building",
   "ingredients": [
     {
-      "item": "endmod:block_of_voidite"
+      "item": "voiditemod:block_of_voidite"
     }
   ],
   "result": {
     "count": 9,
-    "id": "endmod:voidite_ingot"
+    "id": "voiditemod:voidite_ingot"
   }
 }
