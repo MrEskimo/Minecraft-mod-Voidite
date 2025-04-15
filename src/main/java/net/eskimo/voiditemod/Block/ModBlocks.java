@@ -73,9 +73,9 @@ public class ModBlocks {
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PEARLESCENT_FROGLIGHT).sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> VOIDITE_ORE = registerBlock("voidite_ore",
-            ()-> new Block(BlockBehaviour.Properties.of().strength(1f).requiresCorrectToolForDrops()
+            ()-> new Block(BlockBehaviour.Properties.of().strength(5f).requiresCorrectToolForDrops()
                     //.emissiveRendering((state, world, pos) -> true)
-                    .lightLevel(state -> 9)));
+                    .lightLevel(state -> 6)));
 
     public static final RegistryObject<Block> BLOCK_OF_VOIDITE = registerBlock("block_of_voidite",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops()));

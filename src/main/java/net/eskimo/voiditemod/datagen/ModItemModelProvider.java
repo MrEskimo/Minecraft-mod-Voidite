@@ -26,6 +26,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.GLOWING_VOID_BERRIES.get());
         basicItem(ModItems.SINCEHE_POTATO.get());
         basicItem(ModItems.SINCEHE_POTATO_SEEDS.get());
+        basicItem(ModItems.FORGE_SCALES.get());
+        basicItem(ModItems.VOIDITE_PLATE.get());
+        basicItem(ModItems.ANNEALED_VOIDITE_INGOT.get());
+        basicItem(ModItems.ANNEALED_VOIDITE_PLATE.get());
 
         wallItem(ModBlocks.END_SLUDGE_BRICKS_WALL, ModBlocks.END_SLUDGE_BRICKS);
         wallItem(ModBlocks.PACKED_END_SLUDGE_WALL, ModBlocks.PACKED_END_SLUDGE);
