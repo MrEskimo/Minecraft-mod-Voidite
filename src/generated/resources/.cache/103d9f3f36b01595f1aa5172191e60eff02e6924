@@ -1,4 +1,6 @@
-// 1.21	2025-04-14T15:59:37.8221871	Registries
+// 1.21	2025-04-16T18:51:56.5072232	Registries
 66b0c1307eb1fc1eebafbfa5076c10f43ff0e123 data/voiditemod/forge/biome_modifier/add_end_voidite_ore.json
+080054bbf0805a68eb571a993a675525bdfa3590 data/voiditemod/worldgen/biome/chorus_plains.json
+c26881f1828cdb20bd6204cf49dd8dbc9abfb670 data/voiditemod/worldgen/biome/test_biome.json
 8196ccca00fc691012fc2800a166868c3a94c75e data/voiditemod/worldgen/configured_feature/end_voidite_ore.json
 a1a956ae0096fc72763ebe11af3a5e2b2528531c data/voiditemod/worldgen/placed_feature/end_voidite_ore_placed.json

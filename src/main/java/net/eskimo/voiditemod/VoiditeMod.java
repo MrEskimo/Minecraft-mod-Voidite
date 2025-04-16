@@ -4,8 +4,11 @@ import com.mojang.logging.LogUtils;
 import net.eskimo.voiditemod.Block.ModBlocks;
 import net.eskimo.voiditemod.items.ModCreativeTabs;
 import net.eskimo.voiditemod.items.ModItems;
+import net.eskimo.voiditemod.worldgen.biome.ModTerrablender;
+import net.eskimo.voiditemod.worldgen.biome.surface.ModSurfaceRules;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -19,6 +22,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 // Very important Comment
 // The value here should match an entry in the META-INF/mods.toml file
@@ -40,6 +44,8 @@ public class VoiditeMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModTerrablender.registerBiomes();
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
@@ -50,6 +56,8 @@ public class VoiditeMod {
         event.enqueueWork(()-> {
             ComposterBlock.COMPOSTABLES.put(ModItems.SINCEHE_POTATO.get(), 0.3f);
             ComposterBlock.COMPOSTABLES.put(ModItems.SINCEHE_POTATO_SEEDS.get(), 0.1f);
+
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
         });
     }
 
