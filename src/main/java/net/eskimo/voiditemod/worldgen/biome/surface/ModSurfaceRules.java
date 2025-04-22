@@ -5,6 +5,7 @@ import net.eskimo.voiditemod.worldgen.biome.ModBiomes;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.SurfaceRules;
+import org.checkerframework.checker.units.qual.C;
 
 public class ModSurfaceRules {
     private static final SurfaceRules.RuleSource DIRT = makeStateRule(Blocks.DIRT);
@@ -13,6 +14,7 @@ public class ModSurfaceRules {
     private static final SurfaceRules.RuleSource RAW_VOIDITE = makeStateRule(ModBlocks.VOIDITE_ORE.get());
     private static final SurfaceRules.RuleSource CHORUS_TURF = makeStateRule(ModBlocks.CHORUS_TURF.get());
     private static final SurfaceRules.RuleSource END_STONE = makeStateRule(Blocks.END_STONE);
+    private static final SurfaceRules.RuleSource END_SLUDGE = makeStateRule(ModBlocks.END_SLUDGE.get());
 
 
     public static SurfaceRules.RuleSource makeRules() {
@@ -23,22 +25,14 @@ public class ModSurfaceRules {
         return SurfaceRules.sequence(
                 SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.CHORUS_PLAINS),
                                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, CHORUS_TURF)),
-                        SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, END_STONE)),
+                        SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, END_SLUDGE)),
 
+                SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.TEST_BIOME),
+                                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, RAW_VOIDITE)),
+                        SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, VOIDITE)),
 
-                // Default to a end stone surface
-                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, END_STONE)
-        );
-
-      // return SurfaceRules.sequence(
-      //         SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.TEST_BIOME),
-      //                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, RAW_VOIDITE)),
-      //                 SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, VOIDITE)),
-
-
-      //         // Default to a grass and dirt surface
-      //         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, grassSurface)
-      // );
+                        // Default to a end stone surface
+                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, END_STONE));
     }
 
 

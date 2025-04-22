@@ -1,5 +1,11 @@
 {
-  "carvers": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
   "downfall": 0.8,
   "effects": {
     "fog_color": 10518688,
@@ -15,18 +21,44 @@
   },
   "features": [
     [],
-    [],
-    [],
-    [],
-    [],
-    [],
     [
-      "voiditemod:end_voidite_ore_placed"
+      "minecraft:lake_lava_underground",
+      "minecraft:lake_lava_surface"
+    ],
+    [
+      "minecraft:amethyst_geode"
+    ],
+    [
+      "minecraft:monster_room",
+      "minecraft:monster_room_deep"
     ],
     [],
     [],
     [
-      "minecraft:chorus_plant"
+      "minecraft:ore_dirt",
+      "minecraft:ore_gravel",
+      "minecraft:ore_granite_upper",
+      "minecraft:ore_granite_lower",
+      "minecraft:ore_diorite_upper",
+      "minecraft:ore_diorite_lower",
+      "minecraft:ore_andesite_upper",
+      "minecraft:ore_andesite_lower",
+      "minecraft:ore_tuff",
+      "voiditemod:end_voidite_ore_placed",
+      "voiditemod:end_sludge_disk_placed_key"
+    ],
+    [],
+    [
+      "minecraft:spring_water",
+      "minecraft:spring_lava"
+    ],
+    [
+      "minecraft:glow_lichen",
+      "voiditemod:glowing_void_berry_bush_placed",
+      "voiditemod:void_grass_patch_placed_key"
+    ],
+    [
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": false,

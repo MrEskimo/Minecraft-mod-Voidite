@@ -7,17 +7,24 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 
+import java.util.function.Supplier;
+
 public class GlowingVoidBerryBushBlock extends SweetBerryBushBlock {
-    public GlowingVoidBerryBushBlock(Properties properties) {
+    private final Supplier<Block> block;
+    public GlowingVoidBerryBushBlock(Properties properties, Supplier<Block> block) {
         super(properties);
+        this.block = block;
     }
+
 
     @Override
     public ItemStack getCloneItemStack(LevelReader pLevel, BlockPos pPos, BlockState pState) {
@@ -39,5 +46,11 @@ public class GlowingVoidBerryBushBlock extends SweetBerryBushBlock {
         } else {
             return super.useWithoutItem(pState, pLevel, pPos, pPlayer, pHitResult);
         }
+    }
+
+
+    @Override
+    protected boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+        return pState.is(block.get());
     }
 }

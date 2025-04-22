@@ -7,6 +7,7 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
@@ -14,6 +15,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_END_VOIDITE_ORE = registerKey("add_end_voidite_ore");
+    public static final ResourceKey<BiomeModifier> ADD_GLOWING_VOID_BERRY_BUSH = registerKey("add_glowing_void_berry_bush");
+    public static final ResourceKey<BiomeModifier> ADD_VOID_GRASS_PATCH = registerKey("add_void_grass_patch");
+    public static final ResourceKey<BiomeModifier> ADD_END_SLUDGE_DISK = registerKey("add_end_sludge_disk");
+
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeature = context.lookup(Registries.PLACED_FEATURE);
@@ -24,6 +29,20 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.END_VOIDITE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
+        context.register(ADD_GLOWING_VOID_BERRY_BUSH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS)),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.GLOWING_VOID_BERRY_BUSH_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_VOID_GRASS_PATCH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS)),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.VOID_GRASS_PATCH_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_END_SLUDGE_DISK, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS)),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.END_SLUDGE_DISK_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
 
 
     }

@@ -1,9 +1,6 @@
 package net.eskimo.voiditemod.Block;
 
-import net.eskimo.voiditemod.Block.custom.ChiseledEndStoneBrickPillarBlock;
-import net.eskimo.voiditemod.Block.custom.CustomGrass;
-import net.eskimo.voiditemod.Block.custom.GlowingVoidBerryBushBlock;
-import net.eskimo.voiditemod.Block.custom.SincehePotatoCropBlock;
+import net.eskimo.voiditemod.Block.custom.*;
 import net.eskimo.voiditemod.VoiditeMod;
 import net.eskimo.voiditemod.items.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -54,14 +51,14 @@ public class ModBlocks {
     public static final RegistryObject<WallBlock> PACKED_END_SLUDGE_WALL = registerBlock("packed_end_sludge_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of().strength(2).requiresCorrectToolForDrops().sound(SoundType.PACKED_MUD)));
 
-    public static final RegistryObject<CustomGrass> CHORUS_TURF = registerBlock("chorus_turf",
+    public static final RegistryObject<GrassBlock> CHORUS_TURF = registerBlock("chorus_turf",
             ()-> new CustomGrass(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)
                     .strength(0.5F)
                     .friction(0.65F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<TallGrassBlock> VOID_GRASS = registerBlock("void_grass",
-            ()-> new TallGrassBlock((BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS))));
+            ()-> new ModTallGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS), () -> ModBlocks.CHORUS_TURF.get()));
 
     public static final RegistryObject<Block> END_STONE_BRICK_PILLAR = registerBlock("end_stone_brick_pillar",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE_BRICKS).sound(SoundType.STONE)));
@@ -83,9 +80,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> GLOWING_VOID_BERRY_BUSH = BLOCKS.register("glowing_void_berry_bush",
             () -> new GlowingVoidBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)
                     .emissiveRendering((pState, pLevel, pPos) -> true)
-                    .lightLevel(state -> 4)));
+                    .lightLevel(state -> 4), () -> ModBlocks.CHORUS_TURF.get()));
     public static final RegistryObject<Block> SINCEHE_POTATO_CROP = BLOCKS.register("sincehe_potato_crop",
-            () -> new SincehePotatoCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+            () -> new SincehePotatoCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), () -> ModBlocks.CHORUS_TURF.get()));
 
 
 

@@ -36,6 +36,7 @@ public class ModBiomes {
     }
     public static void globalEndGeneration(BiomeGenerationSettings.Builder builder) {
 
+
     }
 
     public static Biome testBiome(BootstrapContext<Biome> context) {
@@ -91,15 +92,12 @@ public class ModBiomes {
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
         //we need to follow the same order as vanilla biomes for the BiomeDefaultFeatures
-        globalEndGeneration(biomeBuilder);
-
+        globalOverworldGeneration(biomeBuilder);
 
         biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.END_VOIDITE_ORE_PLACED_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, EndPlacements.CHORUS_PLANT);
-
-        //BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
-        //BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
-        // biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.PINE_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.END_SLUDGE_DISK_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.GLOWING_VOID_BERRY_BUSH_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.VOID_GRASS_PATCH_PLACED_KEY);
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(false)

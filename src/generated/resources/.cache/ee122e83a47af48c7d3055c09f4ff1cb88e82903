@@ -1,4 +1,4 @@
-// 1.21	2025-04-14T15:11:26.1783684	Tags for minecraft:block mod id voiditemod
+// 1.21.1	2025-04-22T18:45:52.1185047	Tags for minecraft:block mod id voiditemod
 660565337b61f55a943209a9e4f109e2f90ebd6b data/minecraft/tags/block/mineable/pickaxe.json
 f5a81ab0c5790701797e92f33f4b4bbbf01338f1 data/minecraft/tags/block/mineable/shovel.json
 d48b92489c356e1cac505cd4d85bb5d166df2e20 data/minecraft/tags/block/needs_diamond_tool.json
