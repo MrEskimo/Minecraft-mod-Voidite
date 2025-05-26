@@ -47,7 +47,7 @@ public class ModConfiguredFeatures {
         register(context, END_SLUDGE_DISK_KEY, Feature.DISK,
                 new DiskConfiguration(
                         RuleBasedBlockStateProvider.simple(ModBlocks.END_SLUDGE.get()),
-                        BlockPredicate.matchesBlocks(List.of(ModBlocks.CHORUS_TURF.get())),
+                        BlockPredicate.matchesBlocks(List.of(ModBlocks.CHORUS_TURF.get().Blocks.END_STONE)),
                         UniformInt.of(2, 3),
                         1
                 )
