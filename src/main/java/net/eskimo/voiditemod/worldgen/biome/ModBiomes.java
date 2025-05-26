@@ -1,7 +1,9 @@
 package net.eskimo.voiditemod.worldgen.biome;
 
+import net.eskimo.voiditemod.Config;
 import net.eskimo.voiditemod.VoiditeMod;
 import net.eskimo.voiditemod.worldgen.ModPlacedFeatures;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -10,10 +12,16 @@ import net.minecraft.data.worldgen.placement.OrePlacements;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.random.WeightedEntry;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import terrablender.api.EndBiomeRegistry;
 
 public class ModBiomes {
     public static final ResourceKey<Biome> TEST_BIOME = ResourceKey.create(Registries.BIOME,
@@ -21,9 +29,21 @@ public class ModBiomes {
     public static final ResourceKey<Biome> CHORUS_PLAINS = ResourceKey.create(Registries.BIOME,
             ResourceLocation.fromNamespaceAndPath(VoiditeMod.MOD_ID, "chorus_plains"));
 
+
     public static void boostrap(BootstrapContext<Biome> context) {
+
+        //HolderGetter<ConfiguredWorldCarver<?>> carverGetter = context.lookup(Registries.CONFIGURED_CARVER);
+        //HolderGetter<PlacedFeature> placedFeatureGetter = context.lookup(Registries.PLACED_FEATURE);
+
         context.register(TEST_BIOME, testBiome(context));
-        context.register(CHORUS_PLAINS, chorusBiome(context));
+//context.register(CHORUS_PLAINS, chorusBiome(context));
+        register(context, ModBiomes.CHORUS_PLAINS, ModBiomes.chorusBiome(context));
+    }
+    public static void setupTerraBlender()
+    {
+        registerHighlandsBiome(ModBiomes.CHORUS_PLAINS, 9);
+
+
     }
 
     public static void globalOverworldGeneration(BiomeGenerationSettings.Builder builder) {
@@ -34,6 +54,7 @@ public class ModBiomes {
         BiomeDefaultFeatures.addDefaultSprings(builder);
         BiomeDefaultFeatures.addSurfaceFreezing(builder);
     }
+
     public static void globalEndGeneration(BiomeGenerationSettings.Builder builder) {
 
 
@@ -62,7 +83,7 @@ public class ModBiomes {
 
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
-       // biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.PINE_PLACED_KEY);
+        // biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.PINE_PLACED_KEY);
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(false)
@@ -80,20 +101,20 @@ public class ModBiomes {
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS).build())
                 .build();
     }
+
     public static Biome chorusBiome(BootstrapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
-        //spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.RHINO.get(), 2, 3, 5));
 
-        //spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 5, 4, 4));
-
-        //BiomeDefaultFeatures.farmAnimals(spawnBuilder);
-        //BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.ENDERMAN, 5, 4, 4));
+        BiomeDefaultFeatures.endSpawns(spawnBuilder);
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
         //we need to follow the same order as vanilla biomes for the BiomeDefaultFeatures
-        globalOverworldGeneration(biomeBuilder);
+        globalEndGeneration(biomeBuilder);
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, EndPlacements.CHORUS_PLANT);
+        biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, EndPlacements.END_GATEWAY_RETURN);
         biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.END_VOIDITE_ORE_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.END_SLUDGE_DISK_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.GLOWING_VOID_BERRY_BUSH_PLACED_KEY);
@@ -113,4 +134,14 @@ public class ModBiomes {
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS).build())
                 .build();
     }
+
+    private static void registerHighlandsBiome(ResourceKey<Biome> key, int weight) {
+        EndBiomeRegistry.registerHighlandsBiome(key, weight);
+    }
+
+    private static void register(BootstrapContext<Biome> context, ResourceKey<Biome> key, Biome biome)
+    {
+        context.register(key, biome);
+    }
+
 }

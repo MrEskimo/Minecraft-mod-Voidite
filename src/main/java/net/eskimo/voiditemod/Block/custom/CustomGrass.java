@@ -27,10 +27,10 @@ public class CustomGrass extends GrassBlock {
             return state.is(ModBlocks.CHORUS_TURF.get());
         if (plant.getBlock() == ModBlocks.SINCEHE_POTATO_CROP.get())
             return state.is(ModBlocks.CHORUS_TURF.get());
-       // if (plant.getBlock() == Blocks.CHORUS_PLANT)
-       //     return state.is(ModBlocks.CHORUS_TURF.get());
-       // if (plant.getBlock() == Blocks.CHORUS_FLOWER)
-       //     return state.is(ModBlocks.CHORUS_TURF.get());
+        if (plant.getBlock() == Blocks.CHORUS_PLANT)
+            return state.is(ModBlocks.CHORUS_TURF.get());
+        if (plant.getBlock() == Blocks.CHORUS_FLOWER)
+            return state.is(ModBlocks.CHORUS_TURF.get());
 
         return false;
     }

@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.eskimo.voiditemod.Block.ModBlocks;
 import net.eskimo.voiditemod.items.ModCreativeTabs;
 import net.eskimo.voiditemod.items.ModItems;
+import net.eskimo.voiditemod.worldgen.biome.ModBiomes;
 import net.eskimo.voiditemod.worldgen.biome.ModTerrablender;
 import net.eskimo.voiditemod.worldgen.biome.surface.ModSurfaceRules;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -54,10 +55,12 @@ public class VoiditeMod {
 
     private void commonSetup(final FMLCommonSetupEvent event)  {
         event.enqueueWork(()-> {
+            VoiditeMod.setupTerraBlender();
             ComposterBlock.COMPOSTABLES.put(ModItems.SINCEHE_POTATO.get(), 0.3f);
             ComposterBlock.COMPOSTABLES.put(ModItems.SINCEHE_POTATO_SEEDS.get(), 0.1f);
 
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.END, MOD_ID, ModSurfaceRules.makeRules());
         });
     }
 
@@ -88,5 +91,9 @@ public class VoiditeMod {
         public static void onClientSetup(FMLClientSetupEvent event) {
 
         }
+    }
+    public static void setupTerraBlender()
+    {
+        ModBiomes.setupTerraBlender();
     }
 }

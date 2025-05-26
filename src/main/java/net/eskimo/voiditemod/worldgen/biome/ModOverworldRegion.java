@@ -23,7 +23,7 @@ public class ModOverworldRegion extends Region {
             ResourceKey<Biome>>> mapper) {
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(Biomes.FOREST, ModBiomes.TEST_BIOME);
-            modifiedVanillaOverworldBuilder.replaceBiome(Biomes.PLAINS, ModBiomes.CHORUS_PLAINS);
+            //modifiedVanillaOverworldBuilder.replaceBiome(Biomes.PLAINS, ModBiomes.CHORUS_PLAINS);
         });
 
     }

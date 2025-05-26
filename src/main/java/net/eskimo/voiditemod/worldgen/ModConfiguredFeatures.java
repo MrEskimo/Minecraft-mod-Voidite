@@ -34,8 +34,7 @@ public class ModConfiguredFeatures {
 
         register(context, END_VOIDITE_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables, ModBlocks.VOIDITE_ORE.get().defaultBlockState(), 6));
 
-        register(context, VOID_GRASS_PATCH_KEY, Feature.RANDOM_PATCH, grassPatch(BlockStateProvider.simple(ModBlocks.VOID_GRASS.get()), 32));
-
+        register(context, VOID_GRASS_PATCH_KEY, Feature.RANDOM_PATCH, grassPatch(BlockStateProvider.simple(ModBlocks.VOID_GRASS.get()), 128));
 
         register(context, GLOWING_VOID_BERRY_BUSH_KEY, Feature.RANDOM_PATCH,
                 FeatureUtils.simplePatchConfiguration(
@@ -48,7 +47,7 @@ public class ModConfiguredFeatures {
                 new DiskConfiguration(
                         RuleBasedBlockStateProvider.simple(ModBlocks.END_SLUDGE.get()),
                         BlockPredicate.matchesBlocks(List.of(ModBlocks.CHORUS_TURF.get())),
-                        UniformInt.of(2, 3),
+                        UniformInt.of(2, 5),
                         1
                 )
         );
