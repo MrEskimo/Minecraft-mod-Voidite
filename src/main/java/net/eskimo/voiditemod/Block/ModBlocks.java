@@ -3,6 +3,7 @@ package net.eskimo.voiditemod.Block;
 import net.eskimo.voiditemod.Block.custom.*;
 import net.eskimo.voiditemod.VoiditeMod;
 import net.eskimo.voiditemod.items.ModItems;
+import net.eskimo.voiditemod.worldgen.tree.ModTreeGrowers;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -51,14 +52,14 @@ public class ModBlocks {
     public static final RegistryObject<WallBlock> PACKED_END_SLUDGE_WALL = registerBlock("packed_end_sludge_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of().strength(2).requiresCorrectToolForDrops().sound(SoundType.PACKED_MUD)));
 
-    public static final RegistryObject<GrassBlock> CHORUS_TURF = registerBlock("chorus_turf",
+    public static final RegistryObject<GrassBlock> SUNCROWN_TURF = registerBlock("suncrown_turf",
             ()-> new CustomGrass(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)
                     .strength(0.5F)
                     .friction(0.65F)
                     .requiresCorrectToolForDrops()));
 
-    public static final RegistryObject<TallGrassBlock> VOID_GRASS = registerBlock("void_grass",
-            ()-> new ModTallGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS), () -> ModBlocks.CHORUS_TURF.get()));
+    public static final RegistryObject<TallGrassBlock> SUNCROWN_GRASS = registerBlock("suncrown_grass",
+            ()-> new TallGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS)));
 
     public static final RegistryObject<Block> END_STONE_BRICK_PILLAR = registerBlock("end_stone_brick_pillar",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE_BRICKS).sound(SoundType.STONE)));
@@ -80,12 +81,26 @@ public class ModBlocks {
     public static final RegistryObject<Block> GLOWING_VOID_BERRY_BUSH = BLOCKS.register("glowing_void_berry_bush",
             () -> new GlowingVoidBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)
                     .emissiveRendering((pState, pLevel, pPos) -> true)
-                    .lightLevel(state -> 4), () -> ModBlocks.CHORUS_TURF.get()));
+                    .lightLevel(state -> 4), () -> ModBlocks.SUNCROWN_TURF.get()));
     public static final RegistryObject<Block> SINCEHE_POTATO_CROP = BLOCKS.register("sincehe_potato_crop",
-            () -> new SincehePotatoCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), () -> ModBlocks.CHORUS_TURF.get()));
+            () -> new SincehePotatoCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
+    public static final RegistryObject<RotatedPillarBlock> SUNCROWN_OAK_LOG = registerBlock("suncrown_oak_log",
+            () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_SUNCROWN_OAK_LOG = registerBlock("stripped_suncrown_oak_log",
+            () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<RotatedPillarBlock> SUNCROWN_OAK_WOOD = registerBlock("suncrown_oak_wood",
+            () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_SUNCROWN_OAK_WOOD = registerBlock("stripped_suncrown_oak_wood",
+                () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
 
+    public static final RegistryObject<Block> SUNCROWN_OAK_PLANKS = registerBlock("suncrown_oak_planks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> SUNCROWN_OAK_LEAVES = registerBlock("suncrown_oak_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
 
+    public static final RegistryObject<Block> SUNCROWN_OAK_SAPLING = registerBlock("suncrown_oak_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.SUNCROWN_OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
 
 

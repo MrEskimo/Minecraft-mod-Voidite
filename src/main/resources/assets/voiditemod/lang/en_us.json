@@ -16,8 +16,8 @@
   "block.voiditemod.packed_end_sludge": "Packed End Sludge",
   "block.voiditemod.end_sludge": "End Sludge",
   "block.voiditemod.end_sludge_bricks": "End Sludge Bricks",
-  "block.voiditemod.chorus_turf": "Chorus Turf",
-  "block.voiditemod.void_grass": "Void Grass",
+  "block.voiditemod.suncrown_turf": "Suncrown Turf",
+  "block.voiditemod.suncrown_grass": "Suncrown Grass",
   "block.voiditemod.end_stone_brick_pillar": "End Stone Brick Pillar",
   "block.voiditemod.chiseled_end_stone_brick_pillar": "Chiseled End Stone Brick Pillar",
   "block.voiditemod.purpur_light": "Purpur Lamp",
@@ -33,6 +33,15 @@
   "block.voiditemod.packed_end_sludge_slab": "Packed End Sludge Slab",
   "block.voiditemod.packed_end_sludge_stairs": "Packed End Sludge Stairs",
   "block.voiditemod.packed_end_sludge_wall": "Packed End Sludge Wall",
+
+  "block.voiditemod.suncrown_oak_log": "Suncrown Oak Log",
+  "block.voiditemod.stripped_suncrown_oak_log": "Stripped Suncrown Oak Log",
+  "block.voiditemod.suncrown_oak_wood": "Suncrown Oak Wood",
+  "block.voiditemod.stripped_suncrown_oak_wood": "Stripped Suncrown Oak Wood",
+  "block.voiditemod.suncrown_oak_leaves": "Suncrown Oak Leaves",
+  "block.voiditemod.suncrown_suncrown_oak_planks": "Suncrown Oak Planks",
+
+  "block.voiditemod.suncrown_oak_sapling": "Suncrown Oak Sapling",
 
   "creativetab.voiditemod.end_stuff": "End Stuff"
 }

@@ -1,11 +1,13 @@
 package net.eskimo.voiditemod.worldgen;
 
 import com.google.common.collect.ImmutableList;
+import net.eskimo.voiditemod.Block.ModBlocks;
 import net.eskimo.voiditemod.VoiditeMod;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -19,6 +21,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> GLOWING_VOID_BERRY_BUSH_PLACED_KEY = registerKey("glowing_void_berry_bush_placed");
     public static final ResourceKey<PlacedFeature> VOID_GRASS_PATCH_PLACED_KEY = registerKey("void_grass_patch_placed_key");
     public static final ResourceKey<PlacedFeature> END_SLUDGE_DISK_PLACED_KEY = registerKey("end_sludge_disk_placed_key");
+    public static final ResourceKey<PlacedFeature> SUNCROWN_OAK_PLACED_KEY = registerKey("suncrown_oak_placed_key");
 
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
@@ -36,6 +39,10 @@ public class ModPlacedFeatures {
 
         register(context, END_SLUDGE_DISK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_SLUDGE_DISK_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));
+
+        register(context, SUNCROWN_OAK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SUNCROWN_OAK_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.1f, 2),
+                        ModBlocks.SUNCROWN_OAK_SAPLING.get()));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

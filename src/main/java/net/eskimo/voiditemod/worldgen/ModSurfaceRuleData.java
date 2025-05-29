@@ -7,7 +7,7 @@ import net.minecraft.world.level.levelgen.SurfaceRules;
 
 
 public class ModSurfaceRuleData {
-    private static final SurfaceRules.RuleSource CHORUS_TURF = makeStateRule(ModBlocks.CHORUS_TURF.get());
+    private static final SurfaceRules.RuleSource CHORUS_TURF = makeStateRule(ModBlocks.SUNCROWN_TURF.get());
     private static final SurfaceRules.RuleSource END_SLUDGE = makeStateRule(ModBlocks.END_SLUDGE.get());
 
 
@@ -21,7 +21,7 @@ public class ModSurfaceRuleData {
 
         return SurfaceRules.sequence(
                 SurfaceRules.ifTrue(
-                        SurfaceRules.isBiome(ModBiomes.CHORUS_PLAINS),
+                        SurfaceRules.isBiome(ModBiomes.SUNCROWN_PLAINS),
                         SurfaceRules.sequence(
                                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR,
                                         SurfaceRules.sequence(

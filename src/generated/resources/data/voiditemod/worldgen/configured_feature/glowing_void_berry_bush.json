@@ -30,7 +30,7 @@
                 "type": "minecraft:matching_blocks",
                 "blocks": [
                   "minecraft:grass_block",
-                  "voiditemod:chorus_turf"
+                  "voiditemod:suncrown_turf"
                 ],
                 "offset": [
                   0,

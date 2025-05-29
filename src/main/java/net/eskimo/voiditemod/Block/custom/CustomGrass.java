@@ -13,24 +13,26 @@ public class CustomGrass extends GrassBlock {
     public CustomGrass(Properties properties) {
         super(properties);
     }
-        //List<ItemLike> CHORUS_TURF_GROWABLE = List.of(ModBlocks.VOID_GRASS.get(),
+        //List<ItemLike> CHORUS_TURF_GROWABLE = List.of(ModBlocks.CHORUS_GRASS.get(),
         //        ModBlocks.GLOWING_VOID_BERRY_BUSH.get());
 
     @Override
     public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, IPlantable plantable) {
         BlockState plant = plantable.getPlant(world, pos.relative(facing));
         if (plant.getBlock() == ModBlocks.GLOWING_VOID_BERRY_BUSH.get())
-            return state.is(ModBlocks.CHORUS_TURF.get());
-        if (plant.getBlock() == ModBlocks.VOID_GRASS.get())
-            return state.is(ModBlocks.CHORUS_TURF.get());
+            return state.is(ModBlocks.SUNCROWN_TURF.get());
+        if (plant.getBlock() == ModBlocks.SUNCROWN_GRASS.get())
+            return state.is(ModBlocks.SUNCROWN_TURF.get());
         if (plant.getBlock() == Blocks.TORCHFLOWER)
-            return state.is(ModBlocks.CHORUS_TURF.get());
+            return state.is(ModBlocks.SUNCROWN_TURF.get());
         if (plant.getBlock() == ModBlocks.SINCEHE_POTATO_CROP.get())
-            return state.is(ModBlocks.CHORUS_TURF.get());
+            return state.is(ModBlocks.SUNCROWN_TURF.get());
         if (plant.getBlock() == Blocks.CHORUS_PLANT)
-            return state.is(ModBlocks.CHORUS_TURF.get());
+            return state.is(ModBlocks.SUNCROWN_TURF.get());
         if (plant.getBlock() == Blocks.CHORUS_FLOWER)
-            return state.is(ModBlocks.CHORUS_TURF.get());
+            return state.is(ModBlocks.SUNCROWN_TURF.get());
+        if (plant.getBlock() == ModBlocks.SUNCROWN_OAK_SAPLING.get())
+            return state.is(ModBlocks.SUNCROWN_TURF.get());
 
         return false;
     }

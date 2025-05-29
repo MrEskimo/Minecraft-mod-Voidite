@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "cross": "voiditemod:block/void_grass"
+    "cross": "voiditemod:block/suncrown_oak_sapling"
   }
 }

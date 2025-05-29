@@ -4,7 +4,6 @@ import net.eskimo.voiditemod.Block.ModBlocks;
 import net.eskimo.voiditemod.VoiditeMod;
 import net.eskimo.voiditemod.worldgen.ModSurfaceRuleData;
 import net.eskimo.voiditemod.worldgen.biome.ModBiomes;
-import net.minecraft.data.worldgen.SurfaceRuleData;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.SurfaceRules;
@@ -15,7 +14,7 @@ public class ModSurfaceRules {
     private static final SurfaceRules.RuleSource GRASS_BLOCK = makeStateRule(Blocks.GRASS_BLOCK);
     private static final SurfaceRules.RuleSource VOIDITE = makeStateRule(ModBlocks.BLOCK_OF_VOIDITE.get());
     private static final SurfaceRules.RuleSource RAW_VOIDITE = makeStateRule(ModBlocks.VOIDITE_ORE.get());
-    private static final SurfaceRules.RuleSource CHORUS_TURF = makeStateRule(ModBlocks.CHORUS_TURF.get());
+    private static final SurfaceRules.RuleSource CHORUS_TURF = makeStateRule(ModBlocks.SUNCROWN_TURF.get());
     private static final SurfaceRules.RuleSource END_STONE = makeStateRule(Blocks.END_STONE);
     private static final SurfaceRules.RuleSource STONE = makeStateRule(Blocks.STONE);
     private static final SurfaceRules.RuleSource END_SLUDGE = makeStateRule(ModBlocks.END_SLUDGE.get());
@@ -31,7 +30,7 @@ public class ModSurfaceRules {
         SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, GRASS_BLOCK), DIRT);
 
         return SurfaceRules.sequence(
-                SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.CHORUS_PLAINS),
+                SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.SUNCROWN_PLAINS),
                                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, CHORUS_TURF)),
                         SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, END_SLUDGE)),
 

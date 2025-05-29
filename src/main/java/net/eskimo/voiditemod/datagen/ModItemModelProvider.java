@@ -22,7 +22,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SMILE.get());
         basicItem(ModItems.RAW_VOIDITE.get());
         basicItem(ModItems.VOIDITE_INGOT.get());
-        basicItem(ModBlocks.VOID_GRASS.getId());
+        simpleBlockItem(ModBlocks.SUNCROWN_GRASS);
         basicItem(ModItems.GLOWING_VOID_BERRIES.get());
         basicItem(ModItems.SINCEHE_POTATO.get());
         basicItem(ModItems.SINCEHE_POTATO_SEEDS.get());
@@ -34,10 +34,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.END_SLUDGE_BRICKS_WALL, ModBlocks.END_SLUDGE_BRICKS);
         wallItem(ModBlocks.PACKED_END_SLUDGE_WALL, ModBlocks.PACKED_END_SLUDGE);
 
+        saplingItem(ModBlocks.SUNCROWN_OAK_SAPLING);
+
     }
 
 
 
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(VoiditeMod.MOD_ID,"block/" + item.getId().getPath()));
+    }
 
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))

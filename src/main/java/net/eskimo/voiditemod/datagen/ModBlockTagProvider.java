@@ -34,7 +34,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.END_SLUDGE.get())
-                .add(ModBlocks.CHORUS_TURF.get());
+                .add(ModBlocks.SUNCROWN_TURF.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.END_SLUDGE_BRICKS.get())
@@ -46,7 +46,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.PACKED_END_SLUDGE_WALL.get())
                 .add(ModBlocks.PACKED_END_SLUDGE_SLAB.get())
                 .add(ModBlocks.END_STONE_BRICK_PILLAR.get())
-                .add(ModBlocks.CHORUS_TURF.get())
+                .add(ModBlocks.SUNCROWN_TURF.get())
                 .add(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get())
                 .add(ModBlocks.PACKED_END_SLUDGE_STAIRS.get());
 
@@ -57,6 +57,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.WALLS)
                 .add(ModBlocks.END_SLUDGE_BRICKS_WALL.get())
                 .add(ModBlocks.PACKED_END_SLUDGE_WALL.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.SUNCROWN_OAK_LOG.get())
+                .add(ModBlocks.STRIPPED_SUNCROWN_OAK_LOG.get())
+                .add(ModBlocks.STRIPPED_SUNCROWN_OAK_WOOD.get())
+                .add(ModBlocks.SUNCROWN_OAK_WOOD.get());
 
     }
 }

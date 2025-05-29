@@ -23,11 +23,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "voiditemod:chorus_turf"
+          "name": "voiditemod:suncrown_turf"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "voiditemod:blocks/chorus_turf"
+  "random_sequence": "voiditemod:blocks/suncrown_turf"
 }

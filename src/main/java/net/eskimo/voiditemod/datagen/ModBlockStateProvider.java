@@ -52,16 +52,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.PACKED_END_SLUDGE_STAIRS);
         blockItem(ModBlocks.PACKED_END_SLUDGE_SLAB);
 
-        simpleBlockWithItem(ModBlocks.CHORUS_TURF.get(), models().cubeBottomTop(
-                "chorus_turf",
-                modLoc("block/chorus_turf"),
-                modLoc("block/chorus_turf_bottom"),
-                modLoc("block/chorus_turf_top")
+        simpleBlockWithItem(ModBlocks.SUNCROWN_TURF.get(), models().cubeBottomTop(
+                "suncrown_turf",
+                modLoc("block/suncrown_turf"),
+                modLoc("block/suncrown_turf_bottom"),
+                modLoc("block/suncrown_turf_top")
         ));
 
-        simpleBlockWithItem(ModBlocks.VOID_GRASS.get(), models().cross(
-                "void_grass",
-                modLoc("block/void_grass")
+        simpleBlockWithItem(ModBlocks.SUNCROWN_GRASS.get(), models().cross(
+                "suncrown_grass",
+                modLoc("block/suncrown_grass")
                 ).renderType("cutout")
         );
 
@@ -77,6 +77,34 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customLamp();
 
         makeCrop(((CropBlock) ModBlocks.SINCEHE_POTATO_CROP.get()), "sincehe_potato_crop_stage", "sincehe_potato_crop_stage");
+
+        logBlock(ModBlocks.SUNCROWN_OAK_LOG.get());
+        axisBlock(ModBlocks.SUNCROWN_OAK_WOOD.get(), blockTexture(ModBlocks.SUNCROWN_OAK_LOG.get()), blockTexture(ModBlocks.SUNCROWN_OAK_LOG.get()));
+        logBlock(ModBlocks.STRIPPED_SUNCROWN_OAK_LOG.get());
+        axisBlock(ModBlocks.STRIPPED_SUNCROWN_OAK_WOOD.get(), blockTexture(ModBlocks.STRIPPED_SUNCROWN_OAK_LOG.get()), blockTexture(ModBlocks.STRIPPED_SUNCROWN_OAK_LOG.get()));
+
+        blockItem(ModBlocks.SUNCROWN_OAK_LOG);
+        blockItem(ModBlocks.SUNCROWN_OAK_WOOD);
+        blockItem(ModBlocks.STRIPPED_SUNCROWN_OAK_LOG);
+        blockItem(ModBlocks.STRIPPED_SUNCROWN_OAK_WOOD);
+
+        blockWithItem(ModBlocks.SUNCROWN_OAK_PLANKS);
+
+        saplingBlock(ModBlocks.SUNCROWN_OAK_SAPLING);
+        leavesBlock(ModBlocks.SUNCROWN_OAK_LEAVES);
+
+
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
 

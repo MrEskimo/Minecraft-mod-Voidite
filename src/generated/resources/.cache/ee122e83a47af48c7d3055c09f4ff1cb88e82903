@@ -1,6 +1,7 @@
-// 1.21.1	2025-04-22T18:45:52.1185047	Tags for minecraft:block mod id voiditemod
+// 1.21.1	2025-05-28T17:08:18.8857053	Tags for minecraft:block mod id voiditemod
+4f5ff09cb00b17d61e71ef61ef51ba82ef2bf216 data/minecraft/tags/block/logs_that_burn.json
 660565337b61f55a943209a9e4f109e2f90ebd6b data/minecraft/tags/block/mineable/pickaxe.json
-f5a81ab0c5790701797e92f33f4b4bbbf01338f1 data/minecraft/tags/block/mineable/shovel.json
+85a4ac0c203945a48c97af775d289d984f160e8b data/minecraft/tags/block/mineable/shovel.json
 d48b92489c356e1cac505cd4d85bb5d166df2e20 data/minecraft/tags/block/needs_diamond_tool.json
-ecab1ce98361290d7bd217d41e4932162830bb66 data/minecraft/tags/block/needs_iron_tool.json
+cb19ffc63888cedb267e16396abea9a4c345f372 data/minecraft/tags/block/needs_iron_tool.json
 e876784e5e7319a2919d28b0e9e5d578c91a78f8 data/minecraft/tags/block/walls.json

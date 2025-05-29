@@ -40,15 +40,22 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get());
         dropSelf(ModBlocks.PURPUR_LIGHT.get());
         dropSelf(ModBlocks.BLOCK_OF_VOIDITE.get());
-        //dropSelf(ModBlocks.GLOWING_VOID_BERRY_BUSH.get());
+        dropSelf(ModBlocks.SUNCROWN_OAK_PLANKS.get());
+        dropSelf(ModBlocks.STRIPPED_SUNCROWN_OAK_LOG.get());
+        dropSelf(ModBlocks.SUNCROWN_OAK_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_SUNCROWN_OAK_WOOD.get());
+        dropSelf(ModBlocks.SUNCROWN_OAK_WOOD.get());
+        dropSelf(ModBlocks.SUNCROWN_OAK_SAPLING.get());
 
-        this.add(ModBlocks.VOID_GRASS.get(),
-                createShearsOnlyDrop(ModBlocks.VOID_GRASS.get()));
 
-        this.add(ModBlocks.CHORUS_TURF.get(),
-                createSilkTouchOnlyTable(ModBlocks.CHORUS_TURF.get()));
+        this.add(ModBlocks.SUNCROWN_GRASS.get(),
+                createShearsOnlyDrop(ModBlocks.SUNCROWN_GRASS.get()));
 
+        this.add(ModBlocks.SUNCROWN_TURF.get(),
+                createSilkTouchOnlyTable(ModBlocks.SUNCROWN_TURF.get()));
 
+        this.add(ModBlocks.SUNCROWN_OAK_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.SUNCROWN_OAK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.add(ModBlocks.BLOCK_OF_SMILE.get(),
               block -> createOreDrop(ModBlocks.BLOCK_OF_SMILE.get(), ModItems.SMILE.get()));

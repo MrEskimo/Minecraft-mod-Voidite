@@ -30,8 +30,8 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.END_SLUDGE_BRICKS_SLAB.get());
                         output.accept(ModBlocks.END_SLUDGE_BRICKS_WALL.get());
 
-                        output.accept(ModBlocks.CHORUS_TURF.get());
-                        output.accept(ModBlocks.VOID_GRASS.get());
+                        output.accept(ModBlocks.SUNCROWN_TURF.get());
+                        output.accept(ModBlocks.SUNCROWN_GRASS.get());
 
                         output.accept(ModBlocks.END_STONE_BRICK_PILLAR.get());
                         output.accept(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get());
@@ -53,6 +53,15 @@ public class ModCreativeTabs {
 
                         output.accept(ModItems.ANNEALED_VOIDITE_INGOT.get());
                         output.accept(ModItems.ANNEALED_VOIDITE_PLATE.get());
+
+                        output.accept(ModBlocks.SUNCROWN_OAK_LOG.get());
+                        output.accept(ModBlocks.SUNCROWN_OAK_PLANKS.get());
+                        output.accept(ModBlocks.STRIPPED_SUNCROWN_OAK_LOG.get());
+                        output.accept(ModBlocks.SUNCROWN_OAK_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_SUNCROWN_OAK_WOOD.get());
+                        output.accept(ModBlocks.SUNCROWN_OAK_SAPLING.get());
+                        output.accept(ModBlocks.SUNCROWN_OAK_LEAVES.get());
+
 
 
                     }).build());

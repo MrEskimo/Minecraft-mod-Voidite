@@ -14,11 +14,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "voiditemod:void_grass"
+          "name": "voiditemod:suncrown_grass"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "voiditemod:blocks/void_grass"
+  "random_sequence": "voiditemod:blocks/suncrown_grass"
 }
