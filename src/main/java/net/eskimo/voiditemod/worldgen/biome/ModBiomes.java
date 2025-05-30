@@ -27,7 +27,7 @@ public class ModBiomes {
         //HolderGetter<ConfiguredWorldCarver<?>> carverGetter = context.lookup(Registries.CONFIGURED_CARVER);
         //HolderGetter<PlacedFeature> placedFeatureGetter = context.lookup(Registries.PLACED_FEATURE);
 
-        context.register(TEST_BIOME, testBiome(context));
+       // context.register(TEST_BIOME, testBiome(context));
 //context.register(CHORUS_PLAINS, chorusBiome(context));
         register(context, ModBiomes.SUNCROWN_PLAINS, ModBiomes.chorusBiome(context));
     }
@@ -51,7 +51,7 @@ public class ModBiomes {
 
 
     }
-
+/*
     public static Biome testBiome(BootstrapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         //spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.RHINO.get(), 2, 3, 5));
@@ -93,7 +93,7 @@ public class ModBiomes {
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS).build())
                 .build();
     }
-
+*/
     public static Biome chorusBiome(BootstrapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
