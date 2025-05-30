@@ -105,6 +105,7 @@ public class ModBiomes {
         //we need to follow the same order as vanilla biomes for the BiomeDefaultFeatures
         globalEndGeneration(biomeBuilder);
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SINCEHE_POTATO_PLACE_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SUNCROWN_OAK_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, EndPlacements.CHORUS_PLANT);
         biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, EndPlacements.END_GATEWAY_RETURN);

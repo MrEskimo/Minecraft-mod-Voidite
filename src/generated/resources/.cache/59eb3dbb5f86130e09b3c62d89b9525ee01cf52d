@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-28T17:04:40.9264364	Loot Tables
+// 1.21.1	2025-05-30T14:38:24.1899592	Loot Tables
 ca875cb82aac2d11f79bca096e43c653d0a489b9 data/voiditemod/loot_table/blocks/block_of_smile.json
 393ea87df00721c44d2e50e3c76052daf604abc9 data/voiditemod/loot_table/blocks/block_of_voidite.json
 530bbcf16bc21f2e51821e007186cff5fa2ef6e9 data/voiditemod/loot_table/blocks/chiseled_end_stone_brick_pillar.json
@@ -14,7 +14,7 @@ c193011045c4708cf51304b7088fd234ae383f47 data/voiditemod/loot_table/blocks/packe
 149e44cf2a086c4951aa101846333a20afce9538 data/voiditemod/loot_table/blocks/packed_end_sludge_stairs.json
 9f062516932e2e8cff1cb854969740acc74472fd data/voiditemod/loot_table/blocks/packed_end_sludge_wall.json
 14fd28ed6d4852a01b674b9741428d619aca8cf0 data/voiditemod/loot_table/blocks/purpur_light.json
-3a80c38c3a7d0221a0e4e0261f6b56c7cf307404 data/voiditemod/loot_table/blocks/sincehe_potato_crop.json
+7fc4f16b3863f33377704f4f17919a9682bd52a9 data/voiditemod/loot_table/blocks/sincehe_potato_crop.json
 f9301d43ed7e171019f394d9eececc21844a6efe data/voiditemod/loot_table/blocks/stripped_suncrown_oak_log.json
 3ac7df28a21ed260846f7eb053a927af38c09125 data/voiditemod/loot_table/blocks/stripped_suncrown_oak_wood.json
 9f94eb625c02a5b5adedb7a26bf102e1e3a549c6 data/voiditemod/loot_table/blocks/suncrown_grass.json

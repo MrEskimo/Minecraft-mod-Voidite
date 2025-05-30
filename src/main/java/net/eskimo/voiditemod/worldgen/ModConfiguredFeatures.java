@@ -1,6 +1,7 @@
 package net.eskimo.voiditemod.worldgen;
 
 import net.eskimo.voiditemod.Block.ModBlocks;
+import net.eskimo.voiditemod.Block.custom.SincehePotatoCropBlock;
 import net.eskimo.voiditemod.VoiditeMod;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -11,15 +12,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
-import net.minecraft.world.level.levelgen.feature.featuresize.ThreeLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.DarkOakFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedBlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
@@ -33,6 +33,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> VOID_GRASS_PATCH_KEY = registerKey("void_grass_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GLOWING_VOID_BERRY_BUSH_KEY = registerKey("glowing_void_berry_bush");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_SLUDGE_DISK_KEY = registerKey("end_sludge_disk");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SINCEHE_POTATO_KEY = registerKey("sincehe_potato");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> SUNCROWN_OAK_KEY = registerKey("suncrown_oak");
 
@@ -52,7 +53,14 @@ public class ModConfiguredFeatures {
                                         .defaultBlockState().setValue(SweetBerryBushBlock.AGE, 3))
                         ), List.of(Blocks.GRASS_BLOCK, ModBlocks.SUNCROWN_TURF.get())));
 
+        register(context, SINCEHE_POTATO_KEY, Feature.RANDOM_PATCH,
+                FeatureUtils.simplePatchConfiguration(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                                BlockStateProvider.simple(ModBlocks.SINCEHE_POTATO_CROP.get()
+                                        .defaultBlockState().setValue(SincehePotatoCropBlock.AGE, 4))
+                        ), List.of(ModBlocks.SUNCROWN_TURF.get())));
         register(context, END_SLUDGE_DISK_KEY, Feature.DISK,
+
                 new DiskConfiguration(
                         RuleBasedBlockStateProvider.simple(ModBlocks.END_SLUDGE.get()),
                         BlockPredicate.matchesBlocks(List.of(Blocks.END_STONE ,ModBlocks.SUNCROWN_TURF.get())),
@@ -69,6 +77,8 @@ public class ModConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(3), 3),
 
                 new TwoLayersFeatureSize(1, 0, 2)).dirt(BlockStateProvider.simple(Blocks.END_STONE)).build());
+
+
 
 
     }
