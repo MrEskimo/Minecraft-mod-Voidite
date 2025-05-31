@@ -1,17 +1,13 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "building",
-  "key": {
-    "A": {
+  "ingredients": [
+    {
       "item": "voiditemod:end_sludge"
     },
-    "B": {
+    {
       "item": "minecraft:wheat"
     }
-  },
-  "pattern": [
-    "BA",
-    "AB"
   ],
   "result": {
     "count": 1,

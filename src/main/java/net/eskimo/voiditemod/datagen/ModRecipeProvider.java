@@ -1,10 +1,13 @@
 package net.eskimo.voiditemod.datagen;
 
 import net.eskimo.voiditemod.Block.ModBlocks;
+import net.eskimo.voiditemod.VoiditeMod;
 import net.eskimo.voiditemod.items.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -31,11 +34,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModItems.SMILE.get())
                 .unlockedBy(getHasName(ModItems.SMILE.get()), has(ModItems.SMILE.get())).save(pRecipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_END_SLUDGE.get())
-                .pattern("BA")
-                .pattern("AB")
-                .define('A', ModBlocks.END_SLUDGE.get())
-                .define('B', Items.WHEAT)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_END_SLUDGE.get())
+                .requires(ModBlocks.END_SLUDGE.get())
+                .requires(Items.WHEAT)
                 .unlockedBy(getHasName(ModBlocks.END_SLUDGE.get()), has(ModBlocks.END_SLUDGE.get())).save(pRecipeOutput);
 
         twoByTwoPacker(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.END_SLUDGE_BRICKS.get(), ModBlocks.PACKED_END_SLUDGE.get());
@@ -81,5 +82,26 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', Items.POPPED_CHORUS_FRUIT)
                 .define('C', Blocks.END_ROD)
                 .unlockedBy(getHasName(Items.CHORUS_FRUIT), has(Items.CHORUS_FRUIT)).save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNCROWN_OAK_PLANKS.get(), 4)
+                .requires(ModBlocks.SUNCROWN_OAK_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.SUNCROWN_OAK_LOG.get()), has(ModBlocks.SUNCROWN_OAK_LOG.get()))
+                .save(pRecipeOutput, VoiditeMod.MOD_ID + ":suncrown_oak_planks_from_normal_log");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNCROWN_OAK_PLANKS.get(), 4)
+                .requires(ModBlocks.STRIPPED_SUNCROWN_OAK_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.STRIPPED_SUNCROWN_OAK_LOG.get()), has(ModBlocks.STRIPPED_SUNCROWN_OAK_LOG.get()))
+                .save(pRecipeOutput, VoiditeMod.MOD_ID + ":suncrown_oak_planks_from_stripped_log");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNCROWN_OAK_PLANKS.get(), 4)
+                .requires(ModBlocks.SUNCROWN_OAK_WOOD.get())
+                .unlockedBy(getHasName(ModBlocks.SUNCROWN_OAK_WOOD.get()), has(ModBlocks.SUNCROWN_OAK_WOOD.get()))
+                .save(pRecipeOutput, VoiditeMod.MOD_ID + ":suncrown_oak_planks_from_normal_wood");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNCROWN_OAK_PLANKS.get(), 4)
+                .requires(ModBlocks.STRIPPED_SUNCROWN_OAK_WOOD.get())
+                .unlockedBy(getHasName(ModBlocks.STRIPPED_SUNCROWN_OAK_WOOD.get()), has(ModBlocks.STRIPPED_SUNCROWN_OAK_LOG.get()))
+                .save(pRecipeOutput, VoiditeMod.MOD_ID + ":suncrown_oak_planks_from_stripped_wood");
+
+        woodFromLogs(pRecipeOutput, ModBlocks.SUNCROWN_OAK_WOOD.get(), ModBlocks.SUNCROWN_OAK_LOG.get());
+        woodFromLogs(pRecipeOutput, ModBlocks.STRIPPED_SUNCROWN_OAK_WOOD.get(), ModBlocks.STRIPPED_SUNCROWN_OAK_WOOD.get());
     }
 }

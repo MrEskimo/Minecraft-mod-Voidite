@@ -30,11 +30,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.END_STONE_BRICK_PILLAR.get())
                 .add(ModBlocks.VOIDITE_ORE.get())
                 .add(ModBlocks.BLOCK_OF_VOIDITE.get())
+                .add(ModBlocks.SUNCROWN_TURF.get())
                 .add(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get());
 
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
-                .add(ModBlocks.END_SLUDGE.get())
-                .add(ModBlocks.SUNCROWN_TURF.get());
+                .add(ModBlocks.END_SLUDGE.get());
+
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.END_SLUDGE_BRICKS.get())
