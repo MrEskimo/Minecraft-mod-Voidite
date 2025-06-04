@@ -8,6 +8,8 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -102,7 +104,26 @@ public class ModBlocks {
     public static final RegistryObject<Block> SUNCROWN_OAK_SAPLING = registerBlock("suncrown_oak_sapling",
             () -> new SaplingBlock(ModTreeGrowers.SUNCROWN_OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
+    public static final RegistryObject<SlabBlock> SUNCROWN_OAK_SLAB = registerBlock("suncrown_oak_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB)));
+    public static final RegistryObject<StairBlock> SUNCROWN_OAK_STAIRS = registerBlock("suncrown_oak_stairs",
+            () -> new StairBlock(ModBlocks.SUNCROWN_OAK_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS)));
 
+    public static final RegistryObject<PressurePlateBlock> SUNCROWN_OAK_PRESSURE_PLATE = registerBlock("suncrown_oak_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE)));
+    public static final RegistryObject<ButtonBlock> SUNCROWN_OAK_BUTTON = registerBlock("suncrown_oak_button",
+            () -> new ButtonBlock(BlockSetType.OAK,20, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON)));
+
+    public static final RegistryObject<FenceBlock> SUNCROWN_OAK_FENCE = registerBlock("suncrown_oak_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE)));
+    public static final RegistryObject<FenceGateBlock> SUNCROWN_OAK_FENCE_GATE = registerBlock("suncrown_oak_fence_gate",
+            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE)));
+
+    public static final RegistryObject<DoorBlock> SUNCROWN_OAK_DOOR = registerBlock("suncrown_oak_door",
+            () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR)));
+    public static final RegistryObject<TrapDoorBlock> SUNCROWN_OAK_TRAPDOOR = registerBlock("suncrown_oak_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR)));
 
 
 

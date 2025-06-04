@@ -38,6 +38,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.VOIDITE_ORE);
         blockWithItem(ModBlocks.BLOCK_OF_VOIDITE);
 
+        stairsBlock(ModBlocks.SUNCROWN_OAK_STAIRS.get(), blockTexture(ModBlocks.SUNCROWN_OAK_PLANKS.get()));
+
+        //slabBlock(ModBlocks.SUNCROWN_OAK_SLAB.get(), blockTexture(ModBlocks.SUNCROWN_OAK_PLANKS.get()), blockTexture(ModBlocks.SUNCROWN_OAK_PLANKS.get()));
+
+        blockItem(ModBlocks.SUNCROWN_OAK_STAIRS);
+        blockItem(ModBlocks.SUNCROWN_OAK_SLAB);
+        blockItem(ModBlocks.SUNCROWN_OAK_PRESSURE_PLATE);
+        blockItem(ModBlocks.SUNCROWN_OAK_FENCE_GATE);
+        blockItem(ModBlocks.SUNCROWN_OAK_TRAPDOOR, "_bottom");
+
+        buttonBlock(ModBlocks.SUNCROWN_OAK_BUTTON.get(), blockTexture(ModBlocks.SUNCROWN_OAK_PLANKS.get()));
+        pressurePlateBlock(ModBlocks.SUNCROWN_OAK_PRESSURE_PLATE.get(), blockTexture(ModBlocks.SUNCROWN_OAK_PLANKS.get()));
+
+        fenceBlock(ModBlocks.SUNCROWN_OAK_FENCE.get(), blockTexture(ModBlocks.SUNCROWN_OAK_PLANKS.get()));
+        fenceGateBlock(ModBlocks.SUNCROWN_OAK_FENCE_GATE.get(), blockTexture(ModBlocks.SUNCROWN_OAK_PLANKS.get()));
+
+        doorBlockWithRenderType(ModBlocks.SUNCROWN_OAK_DOOR.get(), modLoc("block/suncrown_oak_door_bottom"), modLoc("block/suncrown_oak_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.SUNCROWN_OAK_TRAPDOOR.get(), modLoc("block/suncrown_oak_trapdoor"), true, "cutout");
+
 
         stairsBlock(ModBlocks.END_SLUDGE_BRICKS_STAIRS.get(), blockTexture(ModBlocks.END_SLUDGE_BRICKS.get()));
         wallBlock(ModBlocks.END_SLUDGE_BRICKS_WALL.get(), blockTexture(ModBlocks.END_SLUDGE_BRICKS.get()));

@@ -47,6 +47,20 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.SUNCROWN_OAK_WOOD.get());
         dropSelf(ModBlocks.SUNCROWN_OAK_SAPLING.get());
 
+        this.add(ModBlocks.SUNCROWN_OAK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.SUNCROWN_OAK_SLAB.get()));
+        dropSelf(ModBlocks.SUNCROWN_OAK_STAIRS.get());
+
+        dropSelf(ModBlocks.SUNCROWN_OAK_FENCE_GATE.get());
+        dropSelf(ModBlocks.SUNCROWN_OAK_FENCE.get());
+
+        dropSelf(ModBlocks.SUNCROWN_OAK_TRAPDOOR.get());
+        this.add(ModBlocks.SUNCROWN_OAK_DOOR.get(),
+                block -> createDoorTable(ModBlocks.SUNCROWN_OAK_DOOR.get()));
+
+        dropSelf(ModBlocks.SUNCROWN_OAK_BUTTON.get());
+        dropSelf(ModBlocks.SUNCROWN_OAK_PRESSURE_PLATE.get());
+
 
         this.add(ModBlocks.SUNCROWN_GRASS.get(),
                 createShearsOnlyDrop(ModBlocks.SUNCROWN_GRASS.get()));
@@ -69,6 +83,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.PACKED_END_SLUDGE_STAIRS.get());
         this.add(ModBlocks.PACKED_END_SLUDGE_SLAB.get(),
                  block -> createSlabItemTable(ModBlocks.PACKED_END_SLUDGE_SLAB.get()));
+
+
 
         HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
 

@@ -6,7 +6,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.EndPlacements;
-import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -20,6 +19,8 @@ public class ModBiomes {
             ResourceLocation.fromNamespaceAndPath(VoiditeMod.MOD_ID, "test_biome"));
     public static final ResourceKey<Biome> SUNCROWN_PLAINS = ResourceKey.create(Registries.BIOME,
             ResourceLocation.fromNamespaceAndPath(VoiditeMod.MOD_ID, "suncrown_plains"));
+    public static final ResourceKey<Biome> SUNCROWN_FOREST = ResourceKey.create(Registries.BIOME,
+            ResourceLocation.fromNamespaceAndPath(VoiditeMod.MOD_ID, "suncrown_forest"));
 
 
     public static void boostrap(BootstrapContext<Biome> context) {
@@ -30,11 +31,12 @@ public class ModBiomes {
        // context.register(TEST_BIOME, testBiome(context));
 //context.register(CHORUS_PLAINS, chorusBiome(context));
         register(context, ModBiomes.SUNCROWN_PLAINS, ModBiomes.chorusBiome(context));
+        register(context, ModBiomes.SUNCROWN_FOREST, ModBiomes.suncrownForest(context));
     }
     public static void setupTerraBlender()
     {
-        registerHighlandsBiome(ModBiomes.SUNCROWN_PLAINS, 9);
-
+        registerMidlandsBiome(ModBiomes.SUNCROWN_PLAINS, 4);
+        registerHighlandsBiome(ModBiomes.SUNCROWN_FOREST,4);
 
     }
 
@@ -106,9 +108,10 @@ public class ModBiomes {
         globalEndGeneration(biomeBuilder);
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SINCEHE_POTATO_PLACE_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SUNCROWN_OAK_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SUNCROWN_OAK_PLAINS_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, EndPlacements.CHORUS_PLANT);
         biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, EndPlacements.END_GATEWAY_RETURN);
+        biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.END_STONE_DISK_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.END_VOIDITE_ORE_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.END_SLUDGE_DISK_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.GLOWING_VOID_BERRY_BUSH_PLACED_KEY);
@@ -128,11 +131,48 @@ public class ModBiomes {
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS).build())
                 .build();
     }
+        public static Biome suncrownForest(BootstrapContext<Biome> context) {
+            MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+
+            spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.ENDERMAN, 5, 4, 4));
+            BiomeDefaultFeatures.endSpawns(spawnBuilder);
+
+            BiomeGenerationSettings.Builder biomeBuilder =
+                    new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
+            //we need to follow the same order as vanilla biomes for the BiomeDefaultFeatures
+            globalEndGeneration(biomeBuilder);
+
+            biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SINCEHE_POTATO_PLACE_KEY);
+            biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.SUNCROWN_OAK_FOREST_PLACED_KEY);
+            biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, EndPlacements.CHORUS_PLANT);
+            biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, EndPlacements.END_GATEWAY_RETURN);
+            biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.END_STONE_DISK_PLACED_KEY);
+            biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.END_VOIDITE_ORE_PLACED_KEY);
+            biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.END_SLUDGE_DISK_PLACED_KEY);
+            biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.GLOWING_VOID_BERRY_BUSH_PLACED_KEY);
+            biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.VOID_GRASS_PATCH_PLACED_KEY);
+
+            return new Biome.BiomeBuilder()
+                    .hasPrecipitation(false)
+                    .downfall(0.8f)
+                    .temperature(0.7f)
+                    .generationSettings(biomeBuilder.build())
+                    .mobSpawnSettings(spawnBuilder.build())
+                    .specialEffects((new BiomeSpecialEffects.Builder())
+                            .waterColor(4159204)
+                            .waterFogColor(329011)
+                            .skyColor(0)
+                            .fogColor(10518688)
+                            .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS).build())
+                    .build();
+        }
 
     private static void registerHighlandsBiome(ResourceKey<Biome> key, int weight) {
         EndBiomeRegistry.registerHighlandsBiome(key, weight);
     }
-
+    private static void registerMidlandsBiome(ResourceKey<Biome> key, int weight) {
+        EndBiomeRegistry.registerMidlandsBiome(key, weight);
+    }
     private static void register(BootstrapContext<Biome> context, ResourceKey<Biome> key, Biome biome)
     {
         context.register(key, biome);

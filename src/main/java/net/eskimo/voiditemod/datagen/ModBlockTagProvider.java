@@ -65,5 +65,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STRIPPED_SUNCROWN_OAK_WOOD.get())
                 .add(ModBlocks.SUNCROWN_OAK_WOOD.get());
 
+        tag(BlockTags.WOODEN_FENCES).add(ModBlocks.SUNCROWN_OAK_FENCE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.SUNCROWN_OAK_FENCE_GATE.get());
+
     }
 }

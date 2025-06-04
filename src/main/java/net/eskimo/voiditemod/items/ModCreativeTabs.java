@@ -55,13 +55,22 @@ public class ModCreativeTabs {
                         output.accept(ModItems.ANNEALED_VOIDITE_PLATE.get());
 
                         output.accept(ModBlocks.SUNCROWN_OAK_LOG.get());
-                        output.accept(ModBlocks.SUNCROWN_OAK_PLANKS.get());
+
                         output.accept(ModBlocks.STRIPPED_SUNCROWN_OAK_LOG.get());
                         output.accept(ModBlocks.SUNCROWN_OAK_WOOD.get());
                         output.accept(ModBlocks.STRIPPED_SUNCROWN_OAK_WOOD.get());
                         output.accept(ModBlocks.SUNCROWN_OAK_SAPLING.get());
                         output.accept(ModBlocks.SUNCROWN_OAK_LEAVES.get());
+                        output.accept(ModBlocks.SUNCROWN_OAK_PLANKS.get());
 
+                        output.accept(ModBlocks.SUNCROWN_OAK_SLAB.get());
+                        output.accept(ModBlocks.SUNCROWN_OAK_STAIRS.get());
+                        output.accept(ModBlocks.SUNCROWN_OAK_BUTTON.get());
+                        output.accept(ModBlocks.SUNCROWN_OAK_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.SUNCROWN_OAK_FENCE.get());
+                        output.accept(ModBlocks.SUNCROWN_OAK_FENCE_GATE.get());
+                        output.accept(ModBlocks.SUNCROWN_OAK_DOOR.get());
+                        output.accept(ModBlocks.SUNCROWN_OAK_TRAPDOOR.get());
 
 
                     }).build());

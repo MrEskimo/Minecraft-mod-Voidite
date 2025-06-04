@@ -41,6 +41,18 @@
   "block.voiditemod.suncrown_oak_leaves": "Suncrown Oak Leaves",
   "block.voiditemod.suncrown_oak_planks": "Suncrown Oak Planks",
 
+  "block.voiditemod.suncrown_oak_slab": "Suncrown Oak Slab",
+  "block.voiditemod.suncrown_oak_stairs": "Suncrown Oak Stairs",
+
+  "block.voiditemod.suncrown_oak_button": "Suncrown Oak Button",
+  "block.voiditemod.suncrown_oak_pressure_plate": "Suncrown Oak Pressure Plate",
+
+  "block.voiditemod.suncrown_oak_door": "Suncrown Oak Door",
+  "block.voiditemod.suncrown_oak_trapdoor": "Suncrown Oak Trapdoor",
+
+  "block.voiditemod.suncrown_oak_fence": "Suncrown Oak Trapdoor",
+  "block.voiditemod.suncrown_oak_fence_gate": "Suncrown Oak Fence Gate",
+
   "block.voiditemod.suncrown_oak_sapling": "Suncrown Oak Sapling",
 
   "creativetab.voiditemod.end_stuff": "End Stuff"

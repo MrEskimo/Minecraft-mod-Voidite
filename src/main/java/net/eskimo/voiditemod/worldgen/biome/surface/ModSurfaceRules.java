@@ -38,7 +38,11 @@ public class ModSurfaceRules {
                                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, RAW_VOIDITE)),
                         SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, VOIDITE)),
 
-                        // Default to a end stone surface
+                SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.SUNCROWN_FOREST),
+                                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, CHORUS_TURF)),
+                        SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, END_SLUDGE)),
+
+                        // Default to stone surface
                         SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, STONE));
     }
 

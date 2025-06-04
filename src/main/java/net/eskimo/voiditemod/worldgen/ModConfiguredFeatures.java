@@ -33,6 +33,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> VOID_GRASS_PATCH_KEY = registerKey("void_grass_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GLOWING_VOID_BERRY_BUSH_KEY = registerKey("glowing_void_berry_bush");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_SLUDGE_DISK_KEY = registerKey("end_sludge_disk");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> END_STONE_DISK_KEY = registerKey("end_stone_disk");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SINCEHE_POTATO_KEY = registerKey("sincehe_potato");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> SUNCROWN_OAK_KEY = registerKey("suncrown_oak");
@@ -60,18 +61,22 @@ public class ModConfiguredFeatures {
                                         .defaultBlockState().setValue(SincehePotatoCropBlock.AGE, 4))
                         ), List.of(ModBlocks.SUNCROWN_TURF.get())));
         register(context, END_SLUDGE_DISK_KEY, Feature.DISK,
-
                 new DiskConfiguration(
                         RuleBasedBlockStateProvider.simple(ModBlocks.END_SLUDGE.get()),
                         BlockPredicate.matchesBlocks(List.of(Blocks.END_STONE ,ModBlocks.SUNCROWN_TURF.get())),
-                        UniformInt.of(2, 3),
-                        1
-                )
-        );
+                        UniformInt.of(2, 6),2));
+
+        register(context, END_STONE_DISK_KEY, Feature.DISK,
+                new DiskConfiguration(
+                        RuleBasedBlockStateProvider.simple(Blocks.END_STONE),
+                        BlockPredicate.matchesBlocks(List.of(Blocks.END_STONE ,ModBlocks.SUNCROWN_TURF.get())),
+                        UniformInt.of(2,3),1));
+
+
 
         register(context, SUNCROWN_OAK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.SUNCROWN_OAK_LOG.get()),
-                new ForkingTrunkPlacer(4, 4, 3),
+                new ForkingTrunkPlacer(2, 5, 6),
 
                 BlockStateProvider.simple(ModBlocks.SUNCROWN_OAK_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(3), 3),

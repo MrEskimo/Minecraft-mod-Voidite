@@ -17,12 +17,14 @@ import net.minecraft.world.level.levelgen.placement.*;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final ResourceKey<PlacedFeature> END_VOIDITE_ORE_PLACED_KEY = registerKey("end_voidite_ore_placed");
-    public static final ResourceKey<PlacedFeature> GLOWING_VOID_BERRY_BUSH_PLACED_KEY = registerKey("glowing_void_berry_bush_placed");
+    public static final ResourceKey<PlacedFeature> END_VOIDITE_ORE_PLACED_KEY = registerKey("end_voidite_ore_placed_key");
+    public static final ResourceKey<PlacedFeature> GLOWING_VOID_BERRY_BUSH_PLACED_KEY = registerKey("glowing_void_berry_bush_placed_key");
     public static final ResourceKey<PlacedFeature> VOID_GRASS_PATCH_PLACED_KEY = registerKey("void_grass_patch_placed_key");
     public static final ResourceKey<PlacedFeature> END_SLUDGE_DISK_PLACED_KEY = registerKey("end_sludge_disk_placed_key");
-    public static final ResourceKey<PlacedFeature> SUNCROWN_OAK_PLACED_KEY = registerKey("suncrown_oak_placed_key");
-    public static final ResourceKey<PlacedFeature> SINCEHE_POTATO_PLACE_KEY = registerKey("sincehe_potato_placed");
+    public static final ResourceKey<PlacedFeature> END_STONE_DISK_PLACED_KEY = registerKey("end_stone_disk_placed_key");
+    public static final ResourceKey<PlacedFeature> SUNCROWN_OAK_PLAINS_PLACED_KEY = registerKey("suncrown_oak_placed_key");
+    public static final ResourceKey<PlacedFeature> SINCEHE_POTATO_PLACE_KEY = registerKey("sincehe_potato_placed_key");
+    public static final ResourceKey<PlacedFeature> SUNCROWN_OAK_FOREST_PLACED_KEY = registerKey("suncrown_oak_forest_placed_key");
 
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
@@ -39,10 +41,16 @@ public class ModPlacedFeatures {
                 ImmutableList.of(InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
         register(context, END_SLUDGE_DISK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_SLUDGE_DISK_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(5), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));
+        register(context, END_STONE_DISK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_STONE_DISK_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));
 
-        register(context, SUNCROWN_OAK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SUNCROWN_OAK_KEY),
+        register(context, SUNCROWN_OAK_PLAINS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SUNCROWN_OAK_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.1f, 2),
+                        ModBlocks.SUNCROWN_OAK_SAPLING.get()));
+
+        register(context, SUNCROWN_OAK_FOREST_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SUNCROWN_OAK_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(10,0.1f,2),
                         ModBlocks.SUNCROWN_OAK_SAPLING.get()));
 
         register(context, SINCEHE_POTATO_PLACE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SINCEHE_POTATO_KEY),

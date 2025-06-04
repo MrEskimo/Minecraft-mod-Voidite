@@ -36,6 +36,11 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         saplingItem(ModBlocks.SUNCROWN_OAK_SAPLING);
 
+        buttonItem(ModBlocks.SUNCROWN_OAK_BUTTON, ModBlocks.SUNCROWN_OAK_PLANKS);
+        fenceItem(ModBlocks.SUNCROWN_OAK_FENCE, ModBlocks.SUNCROWN_OAK_PLANKS);
+
+        simpleBlockItem(ModBlocks.SUNCROWN_OAK_DOOR);
+
     }
 
 
@@ -67,6 +72,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     private ItemModelBuilder simpleBlockItem(RegistryObject<? extends Block> item) {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/generated")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(VoiditeMod.MOD_ID,"item/" + item.getId().getPath()));
+                ResourceLocation.fromNamespaceAndPath(VoiditeMod.MOD_ID, "item/" + item.getId().getPath()));
     }
 }

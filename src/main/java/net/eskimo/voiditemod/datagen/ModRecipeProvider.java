@@ -103,5 +103,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         woodFromLogs(pRecipeOutput, ModBlocks.SUNCROWN_OAK_WOOD.get(), ModBlocks.SUNCROWN_OAK_LOG.get());
         woodFromLogs(pRecipeOutput, ModBlocks.STRIPPED_SUNCROWN_OAK_WOOD.get(), ModBlocks.STRIPPED_SUNCROWN_OAK_WOOD.get());
+
+        stairBuilder(ModBlocks.SUNCROWN_OAK_STAIRS.get(), Ingredient.of(ModBlocks.SUNCROWN_OAK_PLANKS.get())).group("suncrown_oak")
+                .unlockedBy(getHasName(ModBlocks.SUNCROWN_OAK_PLANKS.get()), has(ModBlocks.SUNCROWN_OAK_PLANKS.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUNCROWN_OAK_SLAB.get(), ModBlocks.SUNCROWN_OAK_PLANKS.get());
+
+        buttonBuilder(ModBlocks.SUNCROWN_OAK_BUTTON.get(), Ingredient.of(ModBlocks.SUNCROWN_OAK_PLANKS.get())).group("suncrown_oak")
+                .unlockedBy(getHasName(ModBlocks.SUNCROWN_OAK_PLANKS.get()), has(ModBlocks.SUNCROWN_OAK_PLANKS.get())).save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.SUNCROWN_OAK_PRESSURE_PLATE.get(), ModBlocks.SUNCROWN_OAK_PLANKS.get());
+
+        fenceBuilder(ModBlocks.SUNCROWN_OAK_FENCE.get(), Ingredient.of(ModBlocks.SUNCROWN_OAK_PLANKS.get())).group("suncrown_oak")
+                .unlockedBy(getHasName(ModBlocks.SUNCROWN_OAK_PLANKS.get()), has(ModBlocks.SUNCROWN_OAK_PLANKS.get())).save(pRecipeOutput);
+        fenceGateBuilder(ModBlocks.SUNCROWN_OAK_FENCE_GATE.get(), Ingredient.of(ModBlocks.SUNCROWN_OAK_PLANKS.get())).group("suncrown_oak")
+                .unlockedBy(getHasName(ModBlocks.SUNCROWN_OAK_PLANKS.get()),has(ModBlocks.SUNCROWN_OAK_PLANKS.get())).save(pRecipeOutput);
+
+        doorBuilder(ModBlocks.SUNCROWN_OAK_DOOR.get(), Ingredient.of(ModBlocks.SUNCROWN_OAK_PLANKS.get())).group("suncrown_oak")
+                .unlockedBy(getHasName(ModBlocks.SUNCROWN_OAK_PLANKS.get()), has(ModBlocks.SUNCROWN_OAK_PLANKS.get())).save(pRecipeOutput);
+        trapdoorBuilder(ModBlocks.SUNCROWN_OAK_TRAPDOOR.get(), Ingredient.of(ModBlocks.SUNCROWN_OAK_PLANKS.get())).group("suncrown_oak")
+                .unlockedBy(getHasName(ModBlocks.SUNCROWN_OAK_PLANKS.get()), has(ModBlocks.SUNCROWN_OAK_PLANKS.get())).save(pRecipeOutput);
     }
 }
