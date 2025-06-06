@@ -1,4 +1,4 @@
-// 1.21.1	2025-06-03T16:06:48.3137428	Block States: voiditemod
+// 1.21.1	2025-06-06T11:23:37.6997088	Block States: voiditemod
 029193c9894800e4d6566456a7430eefaeaaf020 assets/voiditemod/blockstates/amogus.json
 356cdaf115aa68223c6ed335066dd7e83cd98569 assets/voiditemod/blockstates/block_of_smile.json
 29b9839f7799d821b7a6259dd3f76938a48da45b assets/voiditemod/blockstates/block_of_voidite.json
@@ -28,6 +28,7 @@ cf8a5e1bb533621504f77c8503e30731a788e028 assets/voiditemod/blockstates/suncrown_
 716b29443f64d636ccae9b335ae814b995d0a93c assets/voiditemod/blockstates/suncrown_oak_planks.json
 6054eca7c07d03cea748f19bae999579f6f8404f assets/voiditemod/blockstates/suncrown_oak_pressure_plate.json
 7a4c517543d654e8f2c6c8115fc1ea9c1dd86759 assets/voiditemod/blockstates/suncrown_oak_sapling.json
+6a9b464e9148ef4c0d1604c2087c822c8d8ff7ac assets/voiditemod/blockstates/suncrown_oak_slab.json
 736c9a0cdbce9d58abc5377db123fba1efe0e5a8 assets/voiditemod/blockstates/suncrown_oak_stairs.json
 dd03c3b489051d1d01f86396100016fea36e9f57 assets/voiditemod/blockstates/suncrown_oak_trapdoor.json
 27a32afd079f14136ca18f183dd013ea3a3be408 assets/voiditemod/blockstates/suncrown_oak_wood.json
@@ -96,6 +97,8 @@ cf5aa16f44c199b9cadfdf3a0f67e0328529b1b3 assets/voiditemod/models/block/suncrown
 e555c1e82ff93e81a4a501be4934e58e19a3eaf2 assets/voiditemod/models/block/suncrown_oak_pressure_plate.json
 3c23f6eb54407655da37087f445127c2ff634296 assets/voiditemod/models/block/suncrown_oak_pressure_plate_down.json
 d678477105dd51dfa22394697c62b5307368d01a assets/voiditemod/models/block/suncrown_oak_sapling.json
+0a9cd57402fe28340a904003e06dd6dfc1158ebe assets/voiditemod/models/block/suncrown_oak_slab.json
+6694d65b276ca172a8b4fc08a5f4f713c99ab6e2 assets/voiditemod/models/block/suncrown_oak_slab_top.json
 520f09ab41388c98a9a903ace3616ec8d30c1c12 assets/voiditemod/models/block/suncrown_oak_stairs.json
 b76e01ea2d54397d3a065ee7d06877773226fadf assets/voiditemod/models/block/suncrown_oak_stairs_inner.json
 8f2d1bed86506d9d165db3ef7741f61eb1e8f64a assets/voiditemod/models/block/suncrown_oak_stairs_outer.json

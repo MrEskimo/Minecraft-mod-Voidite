@@ -38,9 +38,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.VOIDITE_ORE);
         blockWithItem(ModBlocks.BLOCK_OF_VOIDITE);
 
+        blockWithItem(ModBlocks.SUNCROWN_OAK_PLANKS);
+
         stairsBlock(ModBlocks.SUNCROWN_OAK_STAIRS.get(), blockTexture(ModBlocks.SUNCROWN_OAK_PLANKS.get()));
 
-        //slabBlock(ModBlocks.SUNCROWN_OAK_SLAB.get(), blockTexture(ModBlocks.SUNCROWN_OAK_PLANKS.get()), blockTexture(ModBlocks.SUNCROWN_OAK_PLANKS.get()));
+        slabBlock(ModBlocks.SUNCROWN_OAK_SLAB.get(), blockTexture(ModBlocks.SUNCROWN_OAK_PLANKS.get()), blockTexture(ModBlocks.SUNCROWN_OAK_PLANKS.get()));
 
         blockItem(ModBlocks.SUNCROWN_OAK_STAIRS);
         blockItem(ModBlocks.SUNCROWN_OAK_SLAB);
@@ -107,7 +109,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_SUNCROWN_OAK_LOG);
         blockItem(ModBlocks.STRIPPED_SUNCROWN_OAK_WOOD);
 
-        blockWithItem(ModBlocks.SUNCROWN_OAK_PLANKS);
+
 
         saplingBlock(ModBlocks.SUNCROWN_OAK_SAPLING);
         leavesBlock(ModBlocks.SUNCROWN_OAK_LEAVES);

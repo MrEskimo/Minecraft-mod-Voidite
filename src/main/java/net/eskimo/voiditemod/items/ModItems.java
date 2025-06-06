@@ -36,9 +36,11 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ANNEALED_VOIDITE_INGOT = ITEMS.register("annealed_voidite_ingot",
-            () -> new Item(new Item.Properties().durability(800)));
+            () -> new Item(new Item.Properties()));
+    //.durability(800)
     public static final RegistryObject<Item> ANNEALED_VOIDITE_PLATE = ITEMS.register("annealed_voidite_plate",
-            () -> new Item(new Item.Properties().durability(1000)));
+            () -> new Item(new Item.Properties()));
+    //.durability(1000)
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
