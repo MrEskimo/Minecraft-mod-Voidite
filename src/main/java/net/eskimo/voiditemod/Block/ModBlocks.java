@@ -1,9 +1,11 @@
 package net.eskimo.voiditemod.Block;
 
+import com.mojang.serialization.MapCodec;
 import net.eskimo.voiditemod.Block.custom.*;
 import net.eskimo.voiditemod.VoiditeMod;
 import net.eskimo.voiditemod.items.ModItems;
 import net.eskimo.voiditemod.worldgen.tree.ModTreeGrowers;
+import net.minecraft.util.ColorRGBA;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -88,13 +90,13 @@ public class ModBlocks {
             () -> new SincehePotatoCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
     public static final RegistryObject<RotatedPillarBlock> SUNCROWN_OAK_LOG = registerBlock("suncrown_oak_log",
-            () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_SUNCROWN_OAK_LOG = registerBlock("stripped_suncrown_oak_log",
-            () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<RotatedPillarBlock> SUNCROWN_OAK_WOOD = registerBlock("suncrown_oak_wood",
-            () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_SUNCROWN_OAK_WOOD = registerBlock("stripped_suncrown_oak_wood",
-                () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
+                () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> SUNCROWN_OAK_PLANKS = registerBlock("suncrown_oak_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
@@ -124,6 +126,15 @@ public class ModBlocks {
             () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR)));
     public static final RegistryObject<TrapDoorBlock> SUNCROWN_OAK_TRAPDOOR = registerBlock("suncrown_oak_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR)));
+
+    public static final RegistryObject<Block> SUNCROWN_SILT = registerBlock("suncrown_silt",
+            () -> new ColoredFallingBlock(new ColorRGBA(11173120),
+                    BlockBehaviour.Properties.of().strength(0.25f).sound(SoundType.BASALT)) {
+                @Override
+                protected int getDelayAfterPlace() {
+                    return 40;
+                }}
+    );
 
 
 

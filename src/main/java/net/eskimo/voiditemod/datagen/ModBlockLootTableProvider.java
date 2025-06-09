@@ -46,6 +46,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.STRIPPED_SUNCROWN_OAK_WOOD.get());
         dropSelf(ModBlocks.SUNCROWN_OAK_WOOD.get());
         dropSelf(ModBlocks.SUNCROWN_OAK_SAPLING.get());
+        dropSelf(ModBlocks.SUNCROWN_SILT.get());
 
         this.add(ModBlocks.SUNCROWN_OAK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.SUNCROWN_OAK_SLAB.get()));

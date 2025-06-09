@@ -25,6 +25,8 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> SUNCROWN_OAK_PLAINS_PLACED_KEY = registerKey("suncrown_oak_placed_key");
     public static final ResourceKey<PlacedFeature> SINCEHE_POTATO_PLACE_KEY = registerKey("sincehe_potato_placed_key");
     public static final ResourceKey<PlacedFeature> SUNCROWN_OAK_FOREST_PLACED_KEY = registerKey("suncrown_oak_forest_placed_key");
+    public static final ResourceKey<PlacedFeature> SUNCROWN_SILT_PLACED_KEY = registerKey("suncrown_silt_placed_key");
+
 
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
@@ -55,6 +57,11 @@ public class ModPlacedFeatures {
 
         register(context, SINCEHE_POTATO_PLACE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SINCEHE_POTATO_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(24), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+        register(context, SUNCROWN_SILT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SUNCROWN_SLIT_ROCK),
+                List.of(RarityFilter.onAverageOnceEvery(1), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

@@ -1,37 +1,37 @@
-[06juni2025 11:23:20.287] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\Eskil\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, voiditemod, --all, --output, C:\Users\Eskil\IdeaProjects\Minecraft-mod-Voidite\src\generated\resources, --existing, C:\Users\Eskil\IdeaProjects\Minecraft-mod-Voidite\src\main\resources]
-[06juni2025 11:23:20.307] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Microsoft OpenJDK 64-Bit Server VM 21.0.7+6-LTS
-[06juni2025 11:23:20.309] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.7 by Microsoft; OS Windows 11 arch amd64 version 10.0
-[06juni2025 11:23:20.486] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
-[06juni2025 11:23:20.686] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/Eskil/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
-[06juni2025 11:23:23.337] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[06juni2025 11:23:25.399] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[06juni2025 11:23:25.402] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\Eskil\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, voiditemod, --all, --output, C:\Users\Eskil\IdeaProjects\Minecraft-mod-Voidite\src\generated\resources, --existing, C:\Users\Eskil\IdeaProjects\Minecraft-mod-Voidite\src\main\resources]
-[06juni2025 11:23:25.567] [main/WARN] [mixin/]: Reference map 'terrablender.refmap.json' for terrablender.mixins.json could not be read. If this is a development environment you can ignore this message
-[06juni2025 11:23:25.589] [main/WARN] [mixin/]: Reference map 'terrablender.refmap.json' for terrablender_forge.mixins.json could not be read. If this is a development environment you can ignore this message
-[06juni2025 11:23:25.798] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
-[06juni2025 11:23:25.798] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
-[06juni2025 11:23:35.912] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 52.0.16, for MC 1.21.1 with MCP 20240808.132146
-[06juni2025 11:23:35.912] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v52.0.16 Initialized
-[06juni2025 11:23:35.931] [modloading-worker-0/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
-[06juni2025 11:23:35.931] [modloading-worker-0/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
-[06juni2025 11:23:35.931] [modloading-worker-0/INFO] [terrablender/]: Registered region voiditemod:overworld to index 1 for type OVERWORLD
-[06juni2025 11:23:35.938] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[06juni2025 11:23:36.809] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [voiditemod]
-[06juni2025 11:23:36.888] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Eskil/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.1-52.0.16_mapped_parchment_2024.07.28-1.21/forge-1.21.1-52.0.16_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
-[06juni2025 11:23:36.889] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Eskil/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.1-52.0.16_mapped_parchment_2024.07.28-1.21/forge-1.21.1-52.0.16_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
-[06juni2025 11:23:37.083] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[06juni2025 11:23:37.338] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 255 ms
-[06juni2025 11:23:37.338] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[06juni2025 11:23:37.407] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 68 ms
-[06juni2025 11:23:37.407] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id voiditemod
-[06juni2025 11:23:37.420] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id voiditemod finished after 11 ms
-[06juni2025 11:23:37.420] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id voiditemod
-[06juni2025 11:23:37.422] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id voiditemod finished after 1 ms
-[06juni2025 11:23:37.422] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: voiditemod
-[06juni2025 11:23:37.442] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: voiditemod finished after 19 ms
-[06juni2025 11:23:37.442] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: voiditemod
-[06juni2025 11:23:37.687] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: voiditemod finished after 244 ms
-[06juni2025 11:23:37.687] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[06juni2025 11:23:37.698] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 10 ms
-[06juni2025 11:23:37.698] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 616 ms
-[06juni2025 11:23:37.710] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 280, old count: 278, new count: 281, removed stale: 0, written: 3
+[09juni2025 16:11:44.798] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\Eskil\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, voiditemod, --all, --output, C:\Users\Eskil\IdeaProjects\Minecraft-mod-Voidite\src\generated\resources, --existing, C:\Users\Eskil\IdeaProjects\Minecraft-mod-Voidite\src\main\resources]
+[09juni2025 16:11:44.801] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Microsoft OpenJDK 64-Bit Server VM 21.0.7+6-LTS
+[09juni2025 16:11:44.804] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.7 by Microsoft; OS Windows 11 arch amd64 version 10.0
+[09juni2025 16:11:44.911] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[09juni2025 16:11:45.018] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/Eskil/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[09juni2025 16:11:45.930] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[09juni2025 16:11:46.761] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[09juni2025 16:11:46.768] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\Eskil\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, voiditemod, --all, --output, C:\Users\Eskil\IdeaProjects\Minecraft-mod-Voidite\src\generated\resources, --existing, C:\Users\Eskil\IdeaProjects\Minecraft-mod-Voidite\src\main\resources]
+[09juni2025 16:11:46.800] [main/WARN] [mixin/]: Reference map 'terrablender.refmap.json' for terrablender.mixins.json could not be read. If this is a development environment you can ignore this message
+[09juni2025 16:11:46.805] [main/WARN] [mixin/]: Reference map 'terrablender.refmap.json' for terrablender_forge.mixins.json could not be read. If this is a development environment you can ignore this message
+[09juni2025 16:11:46.886] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
+[09juni2025 16:11:46.887] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
+[09juni2025 16:11:52.884] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 52.0.16, for MC 1.21.1 with MCP 20240808.132146
+[09juni2025 16:11:52.884] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v52.0.16 Initialized
+[09juni2025 16:11:52.904] [modloading-worker-0/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
+[09juni2025 16:11:52.905] [modloading-worker-0/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
+[09juni2025 16:11:52.905] [modloading-worker-0/INFO] [terrablender/]: Registered region voiditemod:overworld to index 1 for type OVERWORLD
+[09juni2025 16:11:52.910] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[09juni2025 16:11:53.625] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [voiditemod]
+[09juni2025 16:11:53.728] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Eskil/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.1-52.0.16_mapped_parchment_2024.07.28-1.21/forge-1.21.1-52.0.16_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[09juni2025 16:11:53.729] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Eskil/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.1-52.0.16_mapped_parchment_2024.07.28-1.21/forge-1.21.1-52.0.16_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
+[09juni2025 16:11:53.881] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[09juni2025 16:11:54.098] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 216 ms
+[09juni2025 16:11:54.099] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[09juni2025 16:11:54.188] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 88 ms
+[09juni2025 16:11:54.188] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id voiditemod
+[09juni2025 16:11:54.202] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id voiditemod finished after 13 ms
+[09juni2025 16:11:54.202] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id voiditemod
+[09juni2025 16:11:54.203] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id voiditemod finished after 1 ms
+[09juni2025 16:11:54.204] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: voiditemod
+[09juni2025 16:11:54.218] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: voiditemod finished after 14 ms
+[09juni2025 16:11:54.218] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: voiditemod
+[09juni2025 16:11:54.441] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: voiditemod finished after 222 ms
+[09juni2025 16:11:54.441] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[09juni2025 16:11:54.450] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 9 ms
+[09juni2025 16:11:54.450] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 569 ms
+[09juni2025 16:11:54.461] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 289, old count: 290, new count: 290, removed stale: 0, written: 1

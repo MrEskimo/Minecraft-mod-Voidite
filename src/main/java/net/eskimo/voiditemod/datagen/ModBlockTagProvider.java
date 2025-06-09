@@ -2,9 +2,11 @@ package net.eskimo.voiditemod.datagen;
 
 import net.eskimo.voiditemod.Block.ModBlocks;
 import net.eskimo.voiditemod.VoiditeMod;
+import net.eskimo.voiditemod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -34,6 +36,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get());
 
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.SUNCROWN_SILT.get())
                 .add(ModBlocks.END_SLUDGE.get());
 
 
@@ -49,6 +52,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.END_STONE_BRICK_PILLAR.get())
                 .add(ModBlocks.SUNCROWN_TURF.get())
                 .add(ModBlocks.CHISELED_END_STONE_BRICK_PILLAR.get())
+                .add(ModBlocks.SUNCROWN_SILT.get())
                 .add(ModBlocks.PACKED_END_SLUDGE_STAIRS.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
@@ -67,6 +71,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.WOODEN_FENCES).add(ModBlocks.SUNCROWN_OAK_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.SUNCROWN_OAK_FENCE_GATE.get());
+
+        tag(BlockTags.FALL_DAMAGE_RESETTING).add(ModBlocks.SUNCROWN_SILT.get());
+
+        tag(ModTags.Blocks.SUNCROWN_OAK_ROOT_REPLACEABLE)
+                .add(ModBlocks.SUNCROWN_TURF.get())
+                .add(ModBlocks.END_SLUDGE.get())
+                .add(Blocks.END_STONE);
+
+        this.tag(ModTags.Blocks.SUNCROWN_OAK_GROWS_ON)
+                .add(ModBlocks.SUNCROWN_TURF.get())
+                .add(Blocks.END_STONE);
 
     }
 }

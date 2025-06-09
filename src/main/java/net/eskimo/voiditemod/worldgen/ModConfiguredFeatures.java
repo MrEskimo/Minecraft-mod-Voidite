@@ -12,7 +12,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -35,12 +34,13 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_SLUDGE_DISK_KEY = registerKey("end_sludge_disk");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_STONE_DISK_KEY = registerKey("end_stone_disk");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SINCEHE_POTATO_KEY = registerKey("sincehe_potato");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SUNCROWN_SLIT_ROCK = registerKey("silt_rock");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> SUNCROWN_OAK_KEY = registerKey("suncrown_oak");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
-
+        var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, END_VOIDITE_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables, ModBlocks.VOIDITE_ORE.get().defaultBlockState(), 6));
 
@@ -79,12 +79,11 @@ public class ModConfiguredFeatures {
                 new ForkingTrunkPlacer(2, 5, 6),
 
                 BlockStateProvider.simple(ModBlocks.SUNCROWN_OAK_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(3), 3),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(2), 2),
 
                 new TwoLayersFeatureSize(1, 0, 2)).dirt(BlockStateProvider.simple(Blocks.END_STONE)).build());
 
-
-
+        register(context, SUNCROWN_SLIT_ROCK, Feature.BLOCK_PILE, new BlockPileConfiguration(BlockStateProvider.simple(ModBlocks.SUNCROWN_SILT.get())));
 
     }
 
