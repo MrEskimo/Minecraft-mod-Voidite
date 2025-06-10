@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "voiditemod:block/suncrown_silt"
+    "all": "voiditemod:block/suncrown_sand"
   }
 }

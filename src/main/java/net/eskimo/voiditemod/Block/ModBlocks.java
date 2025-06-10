@@ -1,6 +1,5 @@
 package net.eskimo.voiditemod.Block;
 
-import com.mojang.serialization.MapCodec;
 import net.eskimo.voiditemod.Block.custom.*;
 import net.eskimo.voiditemod.VoiditeMod;
 import net.eskimo.voiditemod.items.ModItems;
@@ -127,7 +126,7 @@ public class ModBlocks {
     public static final RegistryObject<TrapDoorBlock> SUNCROWN_OAK_TRAPDOOR = registerBlock("suncrown_oak_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR)));
 
-    public static final RegistryObject<Block> SUNCROWN_SILT = registerBlock("suncrown_silt",
+    public static final RegistryObject<Block> SUNCROWN_SAND = registerBlock("suncrown_sand",
             () -> new ColoredFallingBlock(new ColorRGBA(11173120),
                     BlockBehaviour.Properties.of().strength(0.25f).sound(SoundType.BASALT)) {
                 @Override

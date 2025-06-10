@@ -1,11 +1,16 @@
 {
-  "type": "minecraft:block_pile",
+  "type": "minecraft:netherrack_replace_blobs",
   "config": {
-    "state_provider": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "voiditemod:suncrown_silt"
-      }
+    "radius": {
+      "type": "minecraft:uniform",
+      "max_inclusive": 7,
+      "min_inclusive": 3
+    },
+    "state": {
+      "Name": "voiditemod:suncrown_sand"
+    },
+    "target": {
+      "Name": "minecraft:end_stone"
     }
   }
 }

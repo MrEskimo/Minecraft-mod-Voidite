@@ -40,7 +40,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.SUNCROWN_OAK_PLANKS);
 
-        blockWithItem(ModBlocks.SUNCROWN_SILT);
+        blockWithItem(ModBlocks.SUNCROWN_SAND);
 
         stairsBlock(ModBlocks.SUNCROWN_OAK_STAIRS.get(), blockTexture(ModBlocks.SUNCROWN_OAK_PLANKS.get()));
 

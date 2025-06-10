@@ -34,7 +34,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_SLUDGE_DISK_KEY = registerKey("end_sludge_disk");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_STONE_DISK_KEY = registerKey("end_stone_disk");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SINCEHE_POTATO_KEY = registerKey("sincehe_potato");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SUNCROWN_SLIT_ROCK = registerKey("silt_rock");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SUNCROWN_SAND_BLOB = registerKey("sand_blob");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> SUNCROWN_OAK_KEY = registerKey("suncrown_oak");
 
@@ -83,7 +83,9 @@ public class ModConfiguredFeatures {
 
                 new TwoLayersFeatureSize(1, 0, 2)).dirt(BlockStateProvider.simple(Blocks.END_STONE)).build());
 
-        register(context, SUNCROWN_SLIT_ROCK, Feature.BLOCK_PILE, new BlockPileConfiguration(BlockStateProvider.simple(ModBlocks.SUNCROWN_SILT.get())));
+        register(context, SUNCROWN_SAND_BLOB, Feature.REPLACE_BLOBS,
+                new ReplaceSphereConfiguration(Blocks.END_STONE.defaultBlockState(),
+                        ModBlocks.SUNCROWN_SAND.get().defaultBlockState(), UniformInt.of(3, 7)));
 
     }
 

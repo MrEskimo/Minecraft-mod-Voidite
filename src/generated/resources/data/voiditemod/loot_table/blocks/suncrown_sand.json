@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "voiditemod:suncrown_silt"
+          "name": "voiditemod:suncrown_sand"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "voiditemod:blocks/suncrown_silt"
+  "random_sequence": "voiditemod:blocks/suncrown_sand"
 }

@@ -72,7 +72,7 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.SUNCROWN_OAK_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.SUNCROWN_OAK_BUTTON.get());
 
-                        output.accept(ModBlocks.SUNCROWN_SILT.get());
+                        output.accept(ModBlocks.SUNCROWN_SAND.get());
 
 
                     }).build());

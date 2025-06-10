@@ -1,11 +1,11 @@
-// 1.21.1	2025-06-09T16:11:54.4530762	Registries
+// 1.21.1	2025-06-10T12:07:43.4408503	Registries
 5c27e07ab1fdf98505c534588f5e9ae23b292aee data/voiditemod/worldgen/biome/suncrown_forest.json
 6e08b97eabaaa1cf470f1f8f1be9ab2f42ed0a77 data/voiditemod/worldgen/biome/suncrown_plains.json
 c1bb90459e966c1e1cc844d9073f408c5472b912 data/voiditemod/worldgen/configured_feature/end_sludge_disk.json
 ed1295cf368060cd1d843b9ce2ce7e948b3cd21b data/voiditemod/worldgen/configured_feature/end_stone_disk.json
 8196ccca00fc691012fc2800a166868c3a94c75e data/voiditemod/worldgen/configured_feature/end_voidite_ore.json
 2dbe6d63991da3b530708d91a7a4956373f5866a data/voiditemod/worldgen/configured_feature/glowing_void_berry_bush.json
-8f543536e0b716998ff98abf828daaad9b8b907c data/voiditemod/worldgen/configured_feature/silt_rock.json
+e2b6e0fe8b639337daa006527c677168e9f8f44d data/voiditemod/worldgen/configured_feature/silt_rock.json
 707efc93ad3263eeb6f3f807b07e71aa551c3fff data/voiditemod/worldgen/configured_feature/sincehe_potato.json
 e32fcf7e459acb62cf96d4d596b46a6449b7812f data/voiditemod/worldgen/configured_feature/suncrown_oak.json
 286363c62624022fda8323d6faf79c62e2c48709 data/voiditemod/worldgen/configured_feature/void_grass_patch.json
