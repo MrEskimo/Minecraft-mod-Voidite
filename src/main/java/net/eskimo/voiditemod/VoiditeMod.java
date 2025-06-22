@@ -9,7 +9,6 @@ import net.eskimo.voiditemod.worldgen.biome.ModTerrablender;
 import net.eskimo.voiditemod.worldgen.biome.surface.ModSurfaceRules;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
-import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;

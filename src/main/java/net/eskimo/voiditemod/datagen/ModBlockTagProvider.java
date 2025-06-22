@@ -83,5 +83,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SUNCROWN_TURF.get())
                 .add(Blocks.END_STONE);
 
+        this.tag(ModTags.Blocks.GROWS_ON_SUNCROWN_TURF)
+                .add(ModBlocks.GLOWING_VOID_BERRY_BUSH.get())
+                .add(ModBlocks.SUNCROWN_GRASS.get())
+                .add(ModBlocks.SINCEHE_POTATO_CROP.get())
+                .add(ModBlocks.SUNCROWN_OAK_SAPLING.get())
+                .add(ModBlocks.SUNCROWN_OAK_SAPLING.get())
+                .add(Blocks.TORCHFLOWER);
     }
 }

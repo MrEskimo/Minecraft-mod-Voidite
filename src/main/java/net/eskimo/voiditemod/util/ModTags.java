@@ -13,6 +13,7 @@ public class ModTags {
 
         public static final TagKey<Block> SUNCROWN_OAK_ROOT_REPLACEABLE = createTag("suncrown_oak_root_replaceable");
         public static final TagKey<Block> SUNCROWN_OAK_GROWS_ON = createTag("suncrown_oak_grows_on");
+        public static final TagKey<Block> GROWS_ON_SUNCROWN_TURF = createTag("grows_on_suncrown_turf");
 
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(VoiditeMod.MOD_ID, name));
